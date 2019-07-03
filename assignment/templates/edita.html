@@ -1,0 +1,80 @@
+{% include "header.html" %}
+
+    <form method="POST" class="post-form" action="../updatea/{{assignment.id}}">
+        <!-- <form method="POST" class="post-form" action=""> -->
+        {% csrf_token %}
+        <div class="container">
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                <div class="col-sm-4">
+                    <h3>Update Details</h3>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Assignment Id:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="aid" id="id_aid" required maxlength="20" value="{{assignment.id}}" />
+                    <!-- {{form.errors}} -->
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Teacher Id:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="atid" id="id_atid" required maxlength="100"
+                        value="{{assignment.atid}}" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Faculty Name:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="afname" id="id_afname" required maxlength="10"
+                        value="{{assignment.afname}}" />
+                </div>
+            </div>
+
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Student Batch:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="asbatch" id="id_asbatch" required maxlength="100"
+                        value="{{assignment.asbatch}}" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Assignment Name:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="aname" id="id_aname" required maxlength="100"
+                        value="{{assignment.aname}}" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Subject:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="asubject" id="id_asubject" required maxlength="100"
+                        value="{{assignment.asubject}}" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Assignment Files:</label>
+                <div class="col-sm-4">
+                    <input type="file" name="document" id="id_document" value="{{assignment.document}}" />
+                </div>
+            </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Dead line:</label>
+                        <div class="col-sm-4">
+                            <input type="date" name="adeadline" id="id_adeadline" required maxlength="100"
+                                value="{{assignment.adeadline|date:'Y-m-d'}}" />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Update</button>
+
+    </form>
+{% include "footer.html" %}

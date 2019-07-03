@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include "header.html" %}
+	<meta charset="utf-8">
+	<title>Notics Records</title>
+	{% load staticfiles %}
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static '/styl.css' %}">
+</head>
+<body>
+<table class="table table-striped table-bordered table-sm">
+	<thead class="thead-dark">
+	<tr>
+		<th>Faculty</th>
+		<th>Batch </th>
+		<th>Semester</th>
+		<th>Notics</th>
+		<th>Actions</th>
+	</tr>	
+	</thead>
+	<tbody>
+
+		{%  for notics in notics  %}
+
+		<tr>
+			<th>{{ notics.nfaculty }}</th>
+			<td>{{ notics.nbatch }}</td>
+			<td>{{ notics.nsemester }}</td>
+			<td>{{ notics.nnotics }}</td>
+			<td>
+				<a href="../../notics/edit_n/{{ notics.id }}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+				<a href="../../notics/delete_n/{{ notics.id }}">Delete</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table> 
+<br>
+<br>
+<center><a href="/notics/add/" class="btn btn-primary">Add New Record</a></center>
+</body>
+{% include "footer.html" %}
+</html>

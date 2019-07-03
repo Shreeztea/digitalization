@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+{% include "header.html" %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Table</h2>
+    
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Assignment Id</th>
+            <th>Roll No</th>
+            <th>Student Name</th>
+            <th>Subject</th>
+            <th>Assignment Marks</th>
+            <th>Submission Date</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <form method="POST" class="post-form" action="../../../../update_sub/{{id}}">
+            {% csrf_token %}
+       {% for assignment_submit in assignment_submit %}
+        <tr>
+            <td>
+                <input type="hidden" name="aid{{forloop.counter}}" min="1" required maxlength="1" class="aid" value="{{assignment_submit.aid}}">{{assignment_submit.aid}}
+            </td>
+            <td>
+                <input type="hidden" name="id{{forloop.counter}}" value="{{ assignment_submit.asid }}">{{ forloop.counter }}      
+            </td>
+            <td>
+                <input type="hidden" name="name{{forloop.counter}}" value="{{ assignment_submit.asname }}">{{ assignment_submit.asname }}
+            </td>
+            <td>
+                <input type="hidden" name="sub{{forloop.counter}}" value="{{ assignment_submit.asubject }}">{{ assignment_submit.asubject }}            
+            </td>
+            <td>
+                <input type="number" name="ass{{forloop.counter}}" min="0" max="5" maxlength="1" class="assignment_submit" value="{{ assignment_submit.astatus }}">
+            </td>
+            <td>
+                <input type="hidden" name="date{{forloop.counter}}" value="{{ assignment_submit.adate }}">{{ assignment_submit.adate }}
+            </td>
+            <input type="hidden" name="count" value="{{ forloop.counter }}">
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <label>
+    <button type="submit" class="btn btn-success">Finish</button>
+  </label>
+  </form>
+</body>
+{% include "footer.html" %}
+</html>

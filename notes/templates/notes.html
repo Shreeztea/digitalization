@@ -1,0 +1,38 @@
+{% include "header.html" %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                  <form method="POST" action="../add/" enctype="multipart/form-data">
+                    {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Faculty</label>
+    <select class="form-control" name="nfaculty" id="exampleFormControlSelect1">
+      {%for faculty in faculty%}
+      <option value="{{faculty.fname}}">{{faculty.fname}}</option>
+      {%endfor%}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Batch</label>
+    <select class="form-control" name="nbatch" placeholder="Select batch" id="exampleFormControlSelect2">
+      <option value="2072">2072</option>
+      <option value="2073">2073</option>
+      <option value="2074">2074</option>
+    </select>
+  </div>
+ 
+  <input type="hidden" name="ntid" value="{{request.session.tid}}">
+
+  <div class="form-group">
+      <label for="name">Note name</label><br>
+      <input type="text" name="nname" class="form-control">
+  </div>
+
+  Select files: <input type="file" name="ndocument"><br><br>
+ <button input type="submit" class="btn btn-success">Post</button>
+</form>   
+                </div>
+            </div>
+        </div>
+
+{% include "footer.html" %}

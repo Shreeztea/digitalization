@@ -1,0 +1,30 @@
+{%include "header.html"%}
+<body>
+<table class="table table-striped table-bordered table-sm">
+	<thead class="thead-dark">
+	<tr>
+		<th>Faculty Id</th>
+		<th>Faculty Name</th>
+		<th>Faculty Head</th>
+		<th>Actions</th>
+	</tr>	
+	</thead>
+	<tbody>
+		{% for faculty in faculty %}
+		<tr>
+			<td>{{ faculty.id }}</td>
+			<td>{{ faculty.fname }}</td>
+			<td>{{ faculty.fhead }}</td>
+			<td>
+				<a href="../../faculty/editf/{{ faculty.id }}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+				<a href="../../faculty/deletef/{{ faculty.id }}">Delete</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table> 
+<br>
+<br>
+<center><a href="/faculty/add/" class="btn btn-primary">Add New Record</a></center>
+</body>
+</html>

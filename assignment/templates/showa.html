@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "header.html" %}
+    <meta charset="utf-8">
+    <title>Assignment Records</title>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styl.css' %}">
+</head>
+
+<body>
+    {% if messages %}
+  <!-- <ul class="messages"> -->
+    {% for message in messages %}
+      <!-- <li class="{{ message.tags }}">{{ message }}</li> -->
+      <script>alert('{{message}}')</script>
+    {% endfor %}
+  </ul>
+{% endif %}
+    <table class="table table-striped table-bordered table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>Assignment Id</th>
+                <th>Teacher Id</th>
+                <th>Faculty </th>
+                <th>Assignment Name</th>
+                <th>Assignment Subject</th>
+                <th>Batch</th>
+                <th>Assignment File</th>
+                <th>Deadline</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment in assignment %}
+            <tr>
+                <td>{{ assignment.id }}</td>
+                <td>{{ assignment.atid }}</td>
+                <td>{{ assignment.afname }}</td>
+                <td>{{ assignment.aname }}</td>
+                <td>{{ assignment.asubject }}</td>
+                <td>{{ assignment.asbatch }}</td>
+                <td>
+                    <a href="/assignment/pdf_download/{{ assignment.document }}" TARGET = "_blank">Download</a>
+                    <!-- <a href="/assignment/file_view/{{ assignment.document }}" TARGET = "_blank">View</a> -->
+                    <a href="/assignment/file_view/{{ assignment.document }}" TARGET = "_blank">View</a>
+                </td>
+                <!-- <td><img src="/media/{{ assignment.document }}" height="50" width="60"></td> -->
+                <!-- <td><embed src="/media/{{ assignment.document }}" type="application/pdf" height="50px" width="50"></td> -->
+                <td>{{ assignment.adeadline }}</td>
+                <td>
+                    <a href="/assignment/edita/{{ assignment.id }}"><span
+                            class="glyphicon glyphicon-pencil">Edit</span></a>
+                    <a href="/assignment/deletea/{{ assignment.id }}">Delete</a>
+                    <a href="/assignment_submit/index_sub/{{ assignment.id }}/{{assignment.asubject}}/{{ assignment.afname }}/{{ assignment.asbatch }}">Status</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <center><a href="../../assignment/add/" class="btn btn-primary">Add New Record</a></center>
+</body>
+{% include "footer.html" %}
+</html>

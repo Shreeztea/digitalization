@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+</head>
+<body>
+	<form action="loginauth/" method="POST">
+		{% csrf_token %}
+		Email: <input type="email" name="email">
+		Password: <input type="password" name="pass">
+		<input type="submit" name="submit" value="Login">
+	</form>
+</body>
+</html>

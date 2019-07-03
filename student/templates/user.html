@@ -1,0 +1,95 @@
+{% include "header_std.html" %}
+{% if messages %}
+  <!-- <ul class="messages"> -->
+    {% for message in messages %}
+      <!-- <li class="{{ message.tags }}">{{ message }}</li> -->
+      <script>alert('{{message}}')</script>
+    {% endfor %}
+  <!-- </ul> -->
+{% endif %}
+<form method="POST" class="post-form" action="/student/update/{{student.id}}">
+    {% csrf_token %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Edit Profile</h4>
+                            </div>
+                            <div class="content">
+                               
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>College</label>
+                                                <input type="text" class="form-control" disabled placeholder="Company" value="Kathmandu BernHardt College">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="id" value="{{student.id}}">
+                                        <input type="hidden" name="sid" value="{{student.sid}}">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email Address</label>
+                                                <input type="email"class="form-control" name="semail" id="id_semail"
+                                                value="{{student.semail}}" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Name</label>
+                                                <input type="text"class="form-control" name="sname" id="id_sname" value="{{student.sname}}" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                               <label for="exampleFormControlSelect2">Batch</label>
+                                                <input type="text" class="form-control" id="id_sbatch" disabled placeholder="Company"  
+                                                value="{{student.sbatch}}" />
+                                                <input type="hidden" name="sbatch" placeholder="Company" value="{{student.sbatch}}">
+                                            </div>
+                                        </div>
+                                <div class="row">    
+                                      <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect2">Faculty</label>
+                                            <input type="text" class="form-control" id="id_sfaculty" 
+                                             value="{{student.sfaculty}}" disabled placeholder="Company" />
+                                             <input type="hidden" name="sfaculty" placeholder="Company" value="{{student.sfaculty_id}}">
+                                         </div>
+                                     </div>
+                                </div>     
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                               <label>Contact Number</label>
+                                                <input type="text"  class="form-control" name="scontact" placeholder="Contact no (e.g 98xxxxxxxx)" value="{{student.scontact}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Address</label>
+                                                <input type="text" class="form-control" name="saddress" placeholder="Home address" value="{{student.saddress}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="spassword" value="{{student.spassword}}">
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                    <div class="clearfix"></div>
+                              {{form.errors}}
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </form>    
+   {% include "footer_std.html" %}

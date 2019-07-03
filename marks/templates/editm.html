@@ -1,0 +1,70 @@
+{%include "header.html"%}
+
+<body>
+    <form method="POST" class="post-form" action="../updatem/{{marks.id}}">
+        <!-- <form method="POST" class="post-form" action=""> -->
+        {% csrf_token %}
+        <div class="container">
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                <div class="col-sm-4">
+                    <h3>Update Details</h3>
+                </div>
+            </div>
+       <!--      <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Marks Id:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="mid" id="id_mid" required maxlength="20" value="{{marks.mid}}" />
+                </div>
+            </div> -->
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Student Id:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="sid" id="id_msid" required maxlength="100" value="{{marks.sid}}" />
+                </div>
+            </div>
+             <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Student Name:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="sname" id="id_msid" required maxlength="100" value="{{marks.sname}}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Semester:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="msemester" id="id_msemester" required maxlength="100"
+                        value="{{marks.msemester}}" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Types of Exam:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="mexam" id="id_mexam" required maxlength="100" value="{{marks.mexam}}" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Subject:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="msubject" id="id_msubject" required maxlength="10"
+                        value="{{marks.msubject}}" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Marks:</label>
+                <div class="col-sm-4">
+                    <input type="text" name="mmarks" id="id_mmarks" required maxlength="100" value="{{marks.mmarks}}" />
+                </div>
+            </div>
+            <input type="hidden" name="mbatch" value="{{marks.mbatch}}">
+            <input type="hidden" name="fname" value="{{marks.fname}}">
+            <button type="submit">Update</button>
+
+    </form>
+</body>
+
+</html>

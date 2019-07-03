@@ -1,0 +1,162 @@
+{% include "header_std.html" %}
+{% load mathfilters %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                     <div class="col-md-6">
+                        <div class="card">
+                        <div class="alert alert-info alert-dismissable">Kathmandu Bernhardt College<br>
+                             Mid-Term Examination
+                        </div>
+                        <div class="details">
+            
+                            <b>Name : {{ request.session.user_name }}</b><br><br>
+                            <b>
+                             Roll No : {{ request.session.user_id }}
+                            </b>
+                        </div>
+        
+                        <div class="card">
+                            <table class="table table-striped table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Subject Code</th>
+                                <th>Subject</th>
+                                <th>Theory</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {%for mm in marks_mid%}
+                              <tr>
+                                <td>101</td>
+                                <td>{{mm.msubject}}</td>
+                                <td>{{mm.mmarks}}</td>
+                                <td>{{mm.mmarks}}</td>
+                              </tr>
+                              {%endfor%}
+                            </tbody>
+                            </table>
+                            </div>
+                            <br>
+                            <div class="result"><b>Result : {{mid_pass}}</b><br>
+                         
+                            
+                            <b>Percentage : {{ mid_percent|floatformat:2 }}%</b>
+                       
+                            <br>
+                            </div><br>
+                        </div></div>
+
+                             <div class="col-md-6">
+                        <div class="card">
+                        <div class="alert alert-info alert-dismissable">Kathmandu Bernhardt College<br>
+                             Pre Board Examination
+                        </div>
+                        <div class="details">
+            
+                            <b>Name : {{ request.session.user_name }}</b><br><br>
+                            <b>
+                             Roll No : {{ request.session.user_id }}
+                            </b>
+                        </div>
+        
+            
+
+                             <div class="card">
+                            <table class="table table-striped table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Subject Code</th>
+                                <th>Subject</th>
+                                <th>Theory</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {%for mp in marks_pre%}
+                              <tr>
+                                <td>101</td>
+                                <td>{{mp.msubject}}</td>
+                                <td>{{mp.mmarks}}</td>
+                                <td>{{mp.mmarks}}</td>
+                              </tr>
+                              {%endfor%}
+                            </tbody>
+                            </table>
+                            </div>
+                            <br>
+                            <div class="result"><b>Result : {{pre_pass}}</b><br>
+                         
+                            
+                            <b>Percentage : {{ pre_percent|floatformat:2 }}%</b>
+                       
+                            <br>
+                            </div><br>
+                        </div>
+                    </div>
+                    {% for marks in marks %}
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+
+                        <div class="alert alert-info alert-dismissable">Kathmandu Bernhardt College<br>
+                             {{ marks.mexam }}
+                        </div>
+                        <div class="details">
+            
+                            <b>Name : {{ marks.sname }}</b><br><br>
+                            <b>
+                             Roll No : {{ marks.sid }}
+                            </b>
+                            <br><br>
+                            <b>
+                             Semester : {{ marks.msemester }}
+                            </b>
+                        </div>
+        
+                        <div class="card">
+                            <table class="table table-striped table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Subject Code</th>
+                                <th>Subject</th>
+                                <th>Theory</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>101</td>
+                                <td>{{ marks.msubject }}</td>
+                                <td>{{ marks.mmarks }}</td>
+                                <td>{{ marks.mmarks }}</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                            </div>
+                            <br>
+                            
+                          
+                                {% if marks.msemester == 'Second' or marks.msemester == 'Fourth' %}
+                            
+                            <b>Percentage : {{ marks.mmarks|div:6|floatformat:2 }}%</b>
+                            
+
+                            {% else %}
+                            
+                            <b>Percentage : {{ marks.mmarks|div:5|floatformat:2 }}%</b>
+                            {% endif %}
+
+                            <br>
+                            
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- {% include "footer_std.html" %} -->  

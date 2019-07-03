@@ -1,0 +1,42 @@
+{%include "header.html"%}
+
+<body>
+    <table class="table table-striped table-bordered table-sm">
+        <thead class="thead-dark">
+            <tr>
+               <!--  <th>Marks Id</th>
+                <th>Student Id</th> -->
+                <th>Student Name</th>
+                <th>Semester</th>
+                <th>Types of Exam</th>
+                <th>Subjects</th>
+                <th>Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for marks in marks %}
+            <tr>
+                <!-- <td>{{ marks.id }}</td> -->
+                <!-- <td>{{ marks.sid }}</td> -->
+                <td>{{ marks.sname }}</td>
+                <td>{{ marks.msemester }}</td>
+                <td>{{ marks.mexam }}</td>
+                <td>{{ marks.msubject }}</td>
+                <td>{{ marks.mmarks }}</td>
+               <!--  <td>{{ marks.fname }}</td>
+                <td>{{ marks.mbatch }}</td> -->
+                <td>
+                    <a href="/marks/editm/{{ marks.id }}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+                    <a href="/marks/deletem/{{ marks.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <center><a href="/marks/add/" class="btn btn-primary">Add New Record</a></center>
+</body>
+
+</html>

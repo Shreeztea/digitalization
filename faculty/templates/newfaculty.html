@@ -1,0 +1,38 @@
+{%include "header.html"%}
+<body>
+   <div class="flex-container">
+    <div class="form flex-item ">
+<form method="POST" class="post-form" action="">
+     {% csrf_token %}
+	<div class="Faculty">
+    Enter Details</div><br>
+  <!--   Faculty ID:<br> -->
+  <!--    {{ form.fid }} -->
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Faculty ID:</label>
+    <input type="text" name="fid" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Faculty Name:</label>
+    <input type="text" name="fname" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Faculty Head:</label>
+    <input type="text" name="fhead" class="form-control">
+  </div>
+
+     
+<!--   <br><br>
+  Faculty Name:<br>
+   {{ form.fname }}
+  <br><br>
+  Faculty Head:<br>
+  {{ form.fhead }}
+  <br><br> -->
+    <button class="btn btn-success">Submit<a href="" class="nav-link"></a></button>
+      	</div>
+     </div>  		
+	</div>
+</form>
+</body>
+</html>

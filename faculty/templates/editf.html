@@ -1,0 +1,38 @@
+{%include "header.html"%}
+<body>
+<form method="POST" class="post-form" action="/faculty/updatef/{{faculty.id}}">
+	   {% csrf_token %}
+	<div class="container">
+<br>
+	  <div class="form-group row">
+	  <label class="col-sm-1 col-form-label"></label>
+	  <div class="col-sm-4">
+	  <h3>Update Details</h3>	
+	   </div>	
+	</div>
+	<div class="form-group row">
+	  	<label class="col-sm-2 col-form-label">faculty Id:</label>
+	  	<div class="col-sm-4">
+	  		<input type="text" name="fid" id="id_sid" required maxlength="20" value="{{faculty.fid}}"/>
+	  	</div>
+	</div>
+
+	<div class="form-group row">
+	  	<label class="col-sm-2 col-form-label">faculty Name:</label>
+	  	<div class="col-sm-4">
+	  		<input type="text" name="fname" id="id_sname" required maxlength="100" value="{{faculty.fname}}"/>
+	  	</div>
+	</div>
+
+	<div class="form-group row">
+	  	<label class="col-sm-2 col-form-label">faculty Address:</label>
+	  	<div class="col-sm-4">
+	  		<input type="text" name="fhead" id="id_saddress" required maxlength="100" value="{{faculty.fhead}}"/>
+	  	</div>
+	</div>
+  <button type="submit">Update</button>
+	
+</form>	
+
+</body>
+</html>

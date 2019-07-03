@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Index</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'styl.css' %}">
+</head>
+
+<body>
+	<form method="POST" class="post-form" action="../update/{{student.id}}">
+		<!-- <form method="POST" class="post-form" action=""> -->
+		{% csrf_token %}
+		<div class="container">
+			<br>
+			<div class="form-group row">
+				<label class="col-sm-1 col-form-label"></label>
+				<div class="col-sm-4">
+					<h3>Update Details</h3>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Student Id:</label>
+				<div class="col-sm-4">
+					<input type="text" name="sid" id="id_sid" required maxlength="20" value="{{student.sid}}" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Student Name:</label>
+				<div class="col-sm-4">
+					<input type="text" name="sname" id="id_sname" required maxlength="100" value="{{student.sname}}" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Student Address:</label>
+				<div class="col-sm-4">
+					<input type="text" name="saddress" id="id_saddress" required maxlength="100"
+						value="{{student.saddress}}" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Student Contact:</label>
+				<div class="col-sm-4">
+					<input type="text" name="scontact" id="id_scontact" required maxlength="10"
+						value="{{student.scontact}}" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Student Email:</label>
+				<div class="col-sm-4">
+					<input type="text" name="semail" id="id_semail" required maxlength="100"
+						value="{{student.semail}}" />
+				</div>
+			</div>
+
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Student Batch:</label>
+				<div class="col-sm-4">
+					<input type="text" name="sbatch" id="id_sbatch" required maxlength="100"
+						value="{{student.sbatch}}" />
+
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Student Faculty:</label>
+						<div class="col-sm-4">
+							<input type="text" name="sfaculty" id="id_sfaculty" required maxlength="100"
+								value="{{student.sfaculty_id}}" />
+						</div>
+					</div>
+				</div>
+				<button type="submit">Update</button>
+
+	</form>
+</body>
+
+</html>

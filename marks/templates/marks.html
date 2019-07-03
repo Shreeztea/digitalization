@@ -1,0 +1,141 @@
+{% include "header.html" %}
+    {% if messages %}
+  <!-- <ul class="messages"> -->
+    {% for message in messages %}
+      <!-- <li class="{{ message.tags }}">{{ message }}</li> -->
+      <script>alert('{{message}}')</script>
+    {% endfor %}
+    {% endif %}
+ <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <form action="showm/" method="POST">
+                          {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Faculty</label>
+    <select class="form-control" name="fname" id="exampleFormControlSelect1">
+      {%for faculty in faculty%}
+      <option value="{{faculty.fname}}">{{faculty.fname}}</option>
+      {%endfor%}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Batch</label>
+    <select class="form-control" name="mbatch" placeholder="Select batch" id="exampleFormControlSelect2">
+      <option value="2068">2068</option>
+      <option value="2069">2069</option>
+      <option value="2070">2071</option>
+      <option value="2071">2071</option>
+        <option value="2072">2072</option>
+      <option value="2073">2073</option>
+      <option value="2074">2074</option>
+      <option value="2075">2075</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Semester</label>
+    <select class="form-control" name="msemester" placeholder="Select batch" id="exampleFormControlSelect2">
+      <option value="First">First</option>
+      <option value="Second">Second</option>
+      <option value="Third">Third</option>
+      <option value="Fouth">Fourth</option>
+      <option value="Fifth">Fifth</option>
+      <option value="Sixth">Sixth</option>
+      <option value="Seventh">Seventh</option>
+      <option value="Eighth">Eighth</option>
+    </select>
+  </div>
+   <button type="submit" class="btn btn-primary"> View Marks</button></a>
+</form>
+
+
+                    </div>
+                    <div class="col-md-6">
+                      <form action="mark/" method="POST">
+                        {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Faculty</label>
+    <select class="form-control" name="fname" id="exampleFormControlSelect1">
+        {%for faculty in faculty%}
+      <option value="{{faculty.fname}}">{{faculty.fname}}</option>
+      {%endfor%}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Batch</label>
+    <select class="form-control" name="mbatch" placeholder="Select batch" id="exampleFormControlSelect2">
+      <option value="2068">2068</option>
+      <option value="2069">2069</option>
+      <option value="2070">2071</option>
+      <option value="2072">2072</option>
+      <option value="2073">2073</option>
+      <option value="2074">2074</option>
+      <option value="2075">2075</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Semester</label>
+    <select class="form-control" name="msemester" placeholder="Select batch" id="exampleFormControlSelect2">
+      <option value="First">First</option>
+      <option value="Second">Second</option>
+      <option value="Third">Third</option>
+      <option value="Fouth">Fourth</option>
+      <option value="Fifth">Fifth</option>
+      <option value="Sixth">Sixth</option>
+      <option value="Seventh">Seventh</option>
+      <option value="Eighth">Eighth</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Exam type</label>
+    <select class="form-control" placeholder="Select batch" name="mexam" id="exampleFormControlSelect2">
+       <option value="Class Test">Class Test</option>
+      <option value="Mid-Term">Mid-Term</option>
+      <option value="Pre-Board">Pre-Board</option>
+      <option value="Final">Final</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Subject</label>
+    <input type="text" name="msubject" class="form-control">
+  </div>
+ <button type="Submit" class="btn btn-primary">Update Marks</button></a>
+</form>
+
+  
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+
+</body>
+
+        <!--   Core JS Files   -->
+    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
+{% include "footer.html" %}
+</html>

@@ -1,0 +1,135 @@
+{% include "header.html" %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card ">
+                          <center><h4>Notices Posted By You: </h4></center>
+                            <div class="header">
+
+                                <h4 class="title">Holiday</h4>
+                                {%for n in notice%}
+                                <p class="category">
+                        
+                                  {% if n.ntype == 'Holiday' %}
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+                           
+                            <div class="header">
+                                <h4 class="title">Meeting</h4>
+                                {%for n in notice%}
+                                <p class="category">
+                        
+                                  {% if n.ntype == 'Meeting' %}
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+                             <div class="header">
+                                <h4 class="title">Events</h4>
+                                {%for n in notice%}
+                                <p class="category">
+                        
+                                  {% if n.ntype == 'Events' %}
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+
+                             <div class="header">
+                                <h4 class="title">Others</h4>
+                                {%for n in notice%}
+                                <p class="category">
+                        
+                                  {% if n.ntype == 'Others' %}
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+                        </div> 
+                </div>
+                <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+    <form method="POST" action="../../notice/add/">
+                                    {% csrf_token %}
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Faculty</label>
+    <select class="form-control" name="nfaculty" placeholder="Select batch" id="exampleFormControlSelect2">
+      {%for faculty in faculty%}
+      <option value="{{faculty.fname}}">{{faculty.fname}}</option>
+      {%endfor%}
+     
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Batch</label>
+    <select class="form-control" name="nbatch" placeholder="Select batch" id="exampleFormControlSelect2">
+      <option value="2068">2068</option>
+      <option value="2069">2069</option>
+      <option value="2070">2071</option>
+      <option value="2071">2071</option>
+        <option value="2072">2072</option>
+      <option value="2073">2073</option>
+      <option value="2074">2074</option>
+      <option value="2075">2075</option>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect2">Semester</label>
+    <select class="form-control" placeholder="Select batch"  name="nsemester" id="exampleFormControlSelect2">
+      <option value="First">First</option>
+      <option value="Second">Second</option>
+      <option value="Third">Third</option>
+      <option value="Fourth">Fourth</option>
+      <option value="Fifth">Fifth</option>
+      <option value="Sixth">Sixth</option>
+      <option value="Seventh">Seventh</option>
+      <option value="Eighth">Eighth</option>
+    </select>
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlSelect2">Notice Type</label>
+    <select class="form-control" placeholder="Select batch"  name="ntype" id="exampleFormControlSelect2">
+      <option value="Holiday">Holiday</option>
+      <option value="Meeting">Meeting</option>
+      <option value="Events">Events</option>
+      <option value="Others">Others</option>
+    </select>
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Notice Title</label>
+    <input type="text" class="form-control" name="ntitle" id="exampleFormControlTextarea1" rows="1"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Notice</label>
+    <textarea class="form-control" name="nnotice" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Display Upto</label><br>
+    <input type="date" name="display">
+    <!-- <textarea class="form-control" name="display" id="exampleFormControlTextarea1" rows="1"></textarea> -->
+  </div>
+
+  <input type="hidden" name="uploaded_by" value="{{request.session.tid}}">
+  <!-- <input type="hidden" name="uploaded_at" value="2019-03-12"> -->
+  <button type="submit" class="btn btn-primary">Post Notice</button></a>
+</form>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}

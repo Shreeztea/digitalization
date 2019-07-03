@@ -1,0 +1,32 @@
+{% include "header_std.html" %}
+   <table class="table table-striped table-bordered table-sm">
+       <thead class="thead-dark">
+           <tr>
+               <th>S.no</th>
+               <th>Faculty </th>
+               <th>Assignment Name</th>
+               <th>Assignment Subject</th>
+               <th>Batch</th>
+               <th>Deadline</th>
+               <th>Assignment File</th>
+               
+           </tr>
+       </thead>
+       <tbody>
+           {% for assignment in assignment %}
+           <tr>
+               <td>{{forloop.counter}}</td>
+               <td>{{ assignment.afname }}</td>
+               <td>{{ assignment.aname }}</td>
+               <td>{{ assignment.asubject }}</td>
+               <td>{{ assignment.asbatch }}</td>
+               <td>{{ assignment.adeadline }}</td>
+               <!-- <td>{{ assignment.document }}</td> -->
+               <td>
+                   <a href="/assignment/pdf_download/{{ assignment.document }}" TARGET = "_blank">Download</a>
+                   <a href="/assignment/file_view/{{ assignment.document }}" TARGET = "_blank">View</a>
+               </td>
+               
+               {% endfor %}
+
+{% include "footer_std.html" %}

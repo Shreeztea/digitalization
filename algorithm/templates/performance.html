@@ -1,0 +1,159 @@
+{% include 'header.html' %}
+
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">Students with Good Marks And Good Attendance</h4>
+                            </div>
+                            <div class="content">
+                                <!-- <div id="chartActivity" class="ct-chart"> -->
+                                     <table class="table table-bordered">
+                                <thead>
+                                <!--     <h1>Good Attendance Good Performance</h1>  -->     
+                                  <tr>
+                                    <th>S.no</th>
+                                    <th>Roll No</th>
+                                    <th>Name</th>
+                                    <th>Batch</th>
+                                    <!-- <th>Attendance</th> -->
+                                  </tr>
+                                </thead>
+                                <tbody>
+                             {% csrf_token %}
+                                    {% for std in studenta %}
+                                    <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{std.id}}</td> 
+                                    <td>{{std.sname}}</td>
+                                    <td>{{std.sbatch}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">Students with Good Marks But Bad Attendance</h4>
+                            </div>
+                            <div class="content">
+                                <div id="chartActivity" class="ct-chart">
+                                    <table class="table table-bordered">
+                                <thead>
+                                    <!-- <h1>Bad Attendance Good Performance</h1>       -->
+                                  <tr>
+                                    <th>S.no</th>
+                                    <th>Roll No</th>
+                                    <th>Name</th>
+                                    <th>Batch</th>
+                                    <!-- <th>Attendance</th> -->
+                                  </tr>
+                                </thead>
+                                <tbody>
+                             {% csrf_token %}
+                                    {% for stdb in studentb %}
+                                    <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{stdb.sid}}</td>   
+                                    <td>{{stdb.sname}}</td>
+                                    <td>{{stdb.sbatch}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">Students with Good Attendance But Bad Marks</h4>
+                            </div>
+                            <div class="content">
+                                <div id="chartActivity" class="ct-chart">
+                                    <table class="table table-bordered">
+                                <thead>
+                                    <!-- <h1>Good Attendance Bad Performance</h1>       -->
+                                  <tr>
+                                    <th>S.no</th>
+                                    <th>Roll No</th>
+                                    <th>Name</th>
+                                    <th>Batch</th>
+                                    <!-- <th>Attendance</th> -->
+                                  </tr>
+                                </thead>
+                                <tbody>
+                             {% csrf_token %}
+                                    {% for stdc in studentc %}
+                                    <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{stdc.sid}}</td>   
+                                    <td>{{stdc.sname}}</td>
+                                    <td>{{stdc.sbatch}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">Students with Bad Marks And Bad Attendance</h4>
+                            </div>
+                            <div class="content">
+                                <div id="chartActivity" class="ct-chart">
+                                    <table class="table table-bordered">
+                                <thead>
+                                    <!-- <h1>Bad Attendance Bad Performance</h1>       -->
+                                  <tr>
+                                    <th>S.no</th>
+                                    <th>Roll No</th>
+                                    <th>Name</th>
+                                    <th>Batch</th>
+                                    <!-- <th>Attendance</th> -->
+                                  </tr>
+                                </thead>
+                                <tbody>
+                             {% csrf_token %}
+
+                                    {% for stdd in studentd %}
+
+                                    <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{stdd.sid}}</td>  
+                                    <td>{{stdd.sname}}</td>
+                                    <td>{{stdd.sbatch}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% include 'footer.html' %}

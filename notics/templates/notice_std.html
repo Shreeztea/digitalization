@@ -1,0 +1,78 @@
+{% include "header_std.html" %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card ">
+                         
+                            <div class="header">
+                                {%for n in notics%}
+                                {% if n.ntype == 'Holiday' %}
+                                <h4 class="title">Holiday</h4>
+                                
+                                <p class="category">
+                        
+                                  
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                              
+                            
+                            </div>
+                           
+                            <div class="header">
+                             
+                                {% elif n.ntype == 'Meeting' %}
+                                <h4 class="title">Meeting</h4>
+                                
+                                <p class="category">
+                        
+                                  
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                               
+                            
+                            </div>
+                             <div class="header">
+                              
+                                {% elif n.ntype == 'Events' %}
+                                <h4 class="title">Events</h4>
+                                
+                                <p class="category">
+                        
+                                  
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                               
+                            
+                            </div>
+
+                             <div class="header">
+                                
+                                {% elif n.ntype == 'Others' %}
+                                <h4 class="title">Others</h4>
+                                
+                                <p class="category">
+                        
+                                  
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                        
+                                 <div class="header">
+                                
+                                {% else %}
+                                no notice 
+                                <h4 class="title">Notice</h4>
+                                
+                                <p class="category">
+                                  No notice
+                                </p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+                        </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+                {% include "footer_std.html" %}

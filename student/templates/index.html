@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  {% load staticfiles %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="form flex-item ">
+      <form method="POST" class="post-form" action="">
+        {% csrf_token %}
+        <div class="student">
+          Student Details</div><br>
+        Roll no:<br>
+        {{ form.sid }}
+        <br>
+        Name:<br>
+        {{ form.sname }}
+        <br>
+        Address:<br>
+        {{ form.saddress }}
+        <br>
+        Contact:<br>
+        {{ form.scontact }}
+        <br>
+        Faculty:<br>
+        {{ form.sfaculty }}
+        <br>
+        Batch:<br>
+        {{ form.sbatch }}
+        <br>
+        Email:<br>
+        {{ form.semail }}
+        <br><br>
+        <button class="btn btn-success">Submit<a href="" class="nav-link"></a></button>
+
+
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

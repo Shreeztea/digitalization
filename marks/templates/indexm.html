@@ -1,0 +1,63 @@
+
+
+{% include "header.html" %}
+
+
+
+
+  <div class="container">
+    <h2>Table</h2>
+    
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <!-- <th>Assignment Id</th> -->
+            <th>Roll No</th>
+            <th>Student Name</th>
+            <th>Subject</th>
+            <th>Exam</th>
+            <th>Marks</th>
+            <!-- <th>Submission Date</th> -->
+          </tr>
+        </thead>
+        <tbody>
+
+          <form method="POST" class="post-form" action="../../marks/add_marks/">
+            {% csrf_token %}
+       {% for student in student %}
+        <tr>
+            
+            <td>
+                <input type="hidden" name="id{{forloop.counter}}" value="{{ student.id }}">{{ forloop.counter }}      
+            </td>
+            <td>
+                <input type="hidden" name="name{{forloop.counter}}" value="{{ student.sname }}">{{ student.sname }}
+            </td>
+            <td>
+                <input type="hidden" name="sub{{forloop.counter}}" value="{{ subject }}">{{ subject }}            
+            </td>
+             <td>
+                <input type="hidden" name="exam{{forloop.counter}}" value="{{ exam }}">{{ exam }}            
+            </td>
+            <td>
+                <input type="number" name="marks{{forloop.counter}}">
+            </td>
+               <input type="hidden" name="sem{{forloop.counter}}" value="{{ semester }}">
+               <input type="hidden" name="bat{{forloop.counter}}" value="{{ batch }}">
+               <input type="hidden" name="fna{{forloop.counter}}" value="{{ faculty }}">
+            <input type="hidden" name="count" value="{{ forloop.counter }}">
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <label>
+    <input type="submit" class="btn btn-success">
+  </label>
+  </form>
+</body>
+{% include "footer.html" %}

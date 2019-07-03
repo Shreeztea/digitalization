@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>index page</title>
+</head>
+<body>
+	<div class="flex-container">
+    <div class="form flex-item ">
+    <div class="student">
+	<form method="POST" class="post-form" action="shown" enctype="multipart/form-data">
+	{% csrf_token %}
+	<input type="file" name="document">
+	<h3>Notes</h3>
+
+	{{ form.as_p }}  
+
+	<button type="submit">submit</button>
+	</div>
+	</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Student Records</title>
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'styl.css' %}">
+</head>
+
+<body>
+	<table class="table table-striped table-bordered table-sm">
+		<thead class="thead-dark">
+			<tr>
+				<th>Student Id</th>
+				<th>Student Name</th>
+				<th>Student Address</th>
+				<th>Student Contact</th>
+				<th>Student Email</th>
+				<th>Student Batch</th>
+				<th>Student Faculty</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for student in student %}
+			<tr>
+				<td>{{ student.id }}</td>
+				<td>{{ student.sname }}</td>
+				<td>{{ student.saddress }}</td>
+				<td>{{ student.scontact }}</td>
+				<td>{{ student.semail }}</td>
+				<td>{{ student.sbatch }}</td>
+				<td>{{ student.sfaculty }}</td>
+				<td>
+					<a href="/student/edit/{{ student.id }}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+					<a href="/student/delete/{{ student.id }}">Delete</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<center><a href="/student/add/" class="btn btn-primary">Add New Record</a></center>
+</body>
+
+</html>

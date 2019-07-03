@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Teacher Records</title>
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'styl.css' %}">
+</head>
+
+<body>
+	<table class="table table-striped table-bordered table-sm">
+		<thead class="thead-dark">
+			<tr>
+				<th>Teacher Id</th>
+				<th>Teacher Name</th>
+				<th>Teacher Address</th>
+				<th>Teacher Contact</th>
+				<th>Teacher Email</th>
+				<th>Teacher Faculty</th>
+				<th>Teacher Position</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for teacher in teacher %}
+			<tr>
+				<td>{{ teacher.id }}</td>
+				<td>{{ teacher.tname }}</td>
+				<td>{{ teacher.taddress }}</td>
+				<td>{{ teacher.tcontact }}</td>
+				<td>{{ teacher.temail }}</td>
+				<td>{{ teacher.tfaculty }}</td>
+				<td>{{ teacher.tposition }}</td>
+				<td>
+					<a href="../../teacher/editt/{{ teacher.id }}"><span
+							class="glyphicon glyphicon-pencil">Edit</span></a>
+					<a href="../../teacher/deletet/{{ teacher.id }}">Delete</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<center><a href="/teacher/add" class="btn btn-primary">Add New Record</a></center>
+</body>
+
+</html>
