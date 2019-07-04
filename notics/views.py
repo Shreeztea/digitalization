@@ -3,6 +3,7 @@ from notics.forms import NoticsForm
 from django.http import HttpResponse
 from notics.models import Notics
 from faculty.models import Faculty
+from routine.models import Routine
 
 def notice(request):
 	if request.method == "POST":
@@ -53,7 +54,10 @@ def delete_n(request, id):
 def notice_std(request):
 	faculty=request.session['user_faculty']
 	batch=request.session['user_batch']
+	routine = Routine.objects.filter(rfaculty=faculty,rbatch=batch)
 	notics = Notics.objects.filter(nfaculty=faculty,nbatch=batch)
-	
-	# notics = Notics.objects.all()
-	return render(request,"notice_std.html", {'notics': notics})
+	x={'notics':notics}
+	y={'routine':routine}
+	z={**x,**y}
+	return render(request,"notice_std.html",z)
+

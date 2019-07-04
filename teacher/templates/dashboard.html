@@ -159,6 +159,18 @@
                         </div> 
                 </div>
                                 
+                 <div class="col-md-6">
+                    <div class="card ">
+                        <div class="header">
+                                <center><h2 class="title">Routines</h2></center>
+                                {% for r in routine %}
+                                <h5>{{r.rtitle}}</h5><br>
+                                <img src="../media/{{r.routine}}" height="500" width="480"><br>
+                                {% endfor %}
+                            
+                        </div>
+                    </div> 
+                </div>
 
                     <div class="col-md-6">
                         <div class="card ">

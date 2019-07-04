@@ -3,6 +3,7 @@ from teacher.forms import TeacherForm
 from teacher.models import Teacher
 from django.http import HttpResponse
 from notics.models import Notics
+from routine.models import Routine
 
 # Create your views here.
 def teacher(request):
@@ -42,9 +43,13 @@ def deletet(request, id):
 
 def dashboard(request):
 	notics = Notics.objects.all()
+	routine = Routine.objects.all()
+	x={'notice':notics}
+	y={'routine':routine}
+	z={**x,**y}
 	if('user_email' in request.session):
 		email = request.session['user_email']
-		return render(request,"dashboard.html",{'notice':notics})
+		return render(request,"dashboard.html",z)
 	else:
 		return redirect('../../login')
 

@@ -2,7 +2,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="card ">
                          
                             <div class="header">
@@ -72,7 +72,21 @@
                         </div> 
                 </div>
             </div>
-        </div>
-    </div>
+        
 
+
+                    <div class="col-md-6">
+                        <div class="card ">
+                         
+                            <div class="header">
+
+                                {% for r in routine %}
+                                <h5>{{r.rtitle}}</h5><br>
+                                <img src="../media/{{r.routine}}" height="500" width="480"><br>
+                                {% endfor %}
+                            
+                            </div>
+                        </div> 
+                </div>
+            
                 {% include "footer_std.html" %}
