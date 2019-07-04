@@ -36,6 +36,7 @@ urlpatterns = [
     path('marks/', include('marks.urls')),
     path('login/', include('session.urls')),
     path('algorithm/', include('algorithm.urls')),
+    path('routine/',include('routine.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

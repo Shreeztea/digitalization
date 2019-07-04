@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'session',
     'mathfilters',
     'algorithm',
+    'routine',
 
 ]
 
