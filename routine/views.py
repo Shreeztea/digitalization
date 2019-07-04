@@ -19,6 +19,7 @@ def add(request):
 			except:
 				return HttpResponse('óiuyt')
 		else:
-			return HttpResponse('invalid form')
+
+			return render(request,'routine.html',{'form':form})
 	faculty= Faculty.objects.all()		
 	return render(request, 'routine.html', {'faculty':faculty})
