@@ -1,13 +1,15 @@
 {% include "header_std.html" %}
-<form>
+<form method="post" action="../attendance/attendance_std">
+  {% csrf_token %}
 <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <form>
+                       
     <div class="form-group">
     <label for="exampleFormControlSelect2">Semester</label>
-    <select class="form-control" placeholder="Select batch" id="exampleFormControlSelect2">
+    <select class="form-control" placeholder="Select batch" name="sem" id="exampleFormControlSelect2">
+      <option value="{{sem}}">{{sem}}</option>
       <option value="First">First</option>
       <option value="Second">Second</option>
       <option value="Third">Third</option>
@@ -17,7 +19,10 @@
       <option value="Seventh">Seventh</option>
     </select>
   </div>
+  <input type="submit" value="view">
 </form>
+
+
 
 <div id="piechart"></div>
 
