@@ -53,9 +53,22 @@ def attendance(request):
 
 def attendance_std(request):
 	id = request.session['user_id']
-	attendance= semester.objects.get(id=id,semester='First')
-	# attendance= semester.objects.get(id=id)
-	return render(request,"piechart.html",{'attendance':attendance})
+	if request.method == "POST":
+		sem=request.POST.get('sem')
+		attendance=semester.objects.get(std_id=id,semester=sem)
+		a={'sem':sem}
+		b={'attendance':attendance}
+		c={**a,**b}
+		return render(request,"piechart.html",c)
+	else:
+		sem='First'
+		attendance= semester.objects.get(std_id=id,semester=sem)
+		# attendance= semester.objects.filter(std_id=id)
+		# return HttpResponse(attendance)
+		a={'sem':sem}
+		b={'attendance':attendance}
+		c={**a,**b}
+		return render(request,"piechart.html",c)
 
 def view_attendance(request):
 	if request.method == "POST":
