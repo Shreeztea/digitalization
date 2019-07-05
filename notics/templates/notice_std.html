@@ -5,71 +5,54 @@
                     <div class="col-md-6">
                         <div class="card ">
                          
-                            <div class="header">
-                                {%for n in notics%}
-                                {% if n.ntype == 'Holiday' %}
-                                <h4 class="title">Holiday</h4>
-                                
-                                <p class="category">
-                        
-                                  
-                                 <b> {{n.ntitle}}</b><br>
-                                {{n.nnotice}}</p>
-                              
-                            
-                            </div>
-                           
-                            <div class="header">
-                             
-                                {% elif n.ntype == 'Meeting' %}
-                                <h4 class="title">Meeting</h4>
-                                
-                                <p class="category">
-                        
-                                  
-                                 <b> {{n.ntitle}}</b><br>
-                                {{n.nnotice}}</p>
-                               
-                            
-                            </div>
-                             <div class="header">
-                              
-                                {% elif n.ntype == 'Events' %}
-                                <h4 class="title">Events</h4>
-                                
-                                <p class="category">
-                        
-                                  
-                                 <b> {{n.ntitle}}</b><br>
-                                {{n.nnotice}}</p>
-                               
-                            
-                            </div>
+                           <div class="header">
 
-                             <div class="header">
-                                
-                                {% elif n.ntype == 'Others' %}
-                                <h4 class="title">Others</h4>
-                                
+                                <h4 class="title">Holiday</h4>
+                                {%for n in notice%}
                                 <p class="category">
                         
-                                  
+                                  {% if n.ntype == 'Holiday' %}
                                  <b> {{n.ntitle}}</b><br>
                                 {{n.nnotice}}</p>
-                        
-                                 <div class="header">
-                                
-                                {% else %}
-                                no notice 
-                                <h4 class="title">Notice</h4>
-                                
-                                <p class="category">
-                                  No notice
-                                </p>
                                  {% endif %}
                             {%endfor%}
                             </div>
-                        </div> 
+                           
+                            <div class="header">
+                                <h4 class="title">Meeting</h4>
+                                {%for n in notice%}
+                                <p class="category">
+                        
+                                  {% if n.ntype == 'Meeting' %}
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+                             <div class="header">
+                                <h4 class="title">Events</h4>
+                                {%for n in notice%}
+                                <p class="category">
+                        
+                                  {% if n.ntype == 'Events' %}
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+
+                             <div class="header">
+                                <h4 class="title">Others</h4>
+                                {%for n in notice%}
+                                <p class="category">
+                        
+                                  {% if n.ntype == 'Others' %}
+                                 <b> {{n.ntitle}}</b><br>
+                                {{n.nnotice}}</p>
+                                 {% endif %}
+                            {%endfor%}
+                            </div>
+                        <!-- </div>  -->
                 </div>
             </div>
         

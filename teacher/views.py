@@ -34,7 +34,7 @@ def updatet(request, id):
     if form.is_valid():
        form.save()
        return redirect('../showt')
-    return render(request, "editt.html", {'teacher': teacher},args)
+    return render(request, "editt.html", {'teacher': teacher})
 
 def deletet(request, id):
 	teacher = Teacher.objects.get(id=id)

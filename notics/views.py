@@ -56,7 +56,7 @@ def notice_std(request):
 	batch=request.session['user_batch']
 	routine = Routine.objects.filter(rfaculty=faculty,rbatch=batch)
 	notics = Notics.objects.filter(nfaculty=faculty,nbatch=batch)
-	x={'notics':notics}
+	x={'notice':notics}
 	y={'routine':routine}
 	z={**x,**y}
 	return render(request,"notice_std.html",z)
