@@ -71,12 +71,15 @@
                         <p>User Profile</p>
                     </a>
                 </li>
+                {% if request.session.position != 'Admin' %}
                 <li>
                     <a href="{% url 'attendance:attendance'%}">
                         <i class="pe-7s-date"></i>
                         <p>Attendance</p>
                     </a>
                 </li>
+                {% endif %}
+                {% if request.session.position == 'HOD' or request.session.position == 'Admin' %}
                 <li>
                     <a href="{% url 'notics:notice' %}">
                         <i class="pe-7s-news-paper"></i>
@@ -89,6 +92,13 @@
                         <p>Routine</p>
                     </a>
                 </li>
+                   <li>
+                    <a href="{% url 'algorithm:student_performance' %}">
+                        <i class="pe-7s-note2"></i>
+                        <p>Student Performance</p>
+                    </a>
+                </li>
+                {% endif %}
                 <li>
                     <a href="{% url 'notes:notes' %}">
                         <i class="pe-7s-file"></i>
@@ -101,24 +111,23 @@
                         <p>Marks</p>
                     </a>
                 </li>
+                {% if request.session.position != 'Admin' %}
                  <li>
                     <a href="{% url 'assignment:assignment' %}">
                         <i class="pe-7s-note2"></i>
                         <p>Assignment</p>
                     </a>
                 </li>
+                {% endif %}
+                {% if request.session.position == 'Admin' %}
                  <li>
                     <a href="{% url 'faculty:faculty' %}">
                         <i class="pe-7s-note2"></i>
                         <p>Faculty</p>
                     </a>
                 </li>
-                <li>
-                    <a href="{% url 'algorithm:student_performance' %}">
-                        <i class="pe-7s-note2"></i>
-                        <p>Student Performance</p>
-                    </a>
-                </li>
+                {% endif %}
+             
     	</div>
     </div>
 
