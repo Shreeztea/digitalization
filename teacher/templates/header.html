@@ -73,7 +73,7 @@
                 </li>
                 {% if request.session.position == 'Admin' %}
                  <li>
-                    <a href="student:student_adm">
+                    <a href="{% url 'student:student_adm' %}">
                         <i class="pe-7s-date"></i>
                         <p>Student</p>
                     </a>
