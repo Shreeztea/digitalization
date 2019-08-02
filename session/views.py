@@ -17,6 +17,7 @@ def loginauth(request):
 				request.session['user_name'] = t.tname
 				request.session['tid'] = t.tid
 				request.session['user_facultyid'] = t.tfaculty_id
+				request.session['position'] = t.tposition
 			# request.session['user_email'] = email
 			# ema = request.session['user_faculty']
 			return redirect('../../teacher/dashboard')
