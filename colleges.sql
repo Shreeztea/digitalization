@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2019 at 02:39 PM
+-- Generation Time: Aug 03, 2019 at 05:46 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -1454,7 +1454,10 @@ CREATE TABLE `notes` (
 --
 
 INSERT INTO `notes` (`id`, `ndocument`, `uploaded_at`, `nfaculty`, `ntid`, `nbatch`, `nname`) VALUES
-(1, 'mfan3.jpg', '2019-06-23', 'BSCCSIT', 1, 2072, 'asdf');
+(3, 'InternetTechnology.pdf', '2019-08-03', 'BSCCSIT', 1, 2072, 'Internet Technology PDF'),
+(4, 'dba.pdf', '2019-08-03', 'BSCCSIT', 1, 2072, 'DBA PDF'),
+(5, 'adbms_-_1.pdf', '2019-08-03', 'BSCCSIT', 1, 2072, 'ADBMS PDF'),
+(6, 'Java_Soln.pdf', '2019-08-03', 'BSCCSIT', 1, 2072, 'JAVA Solution');
 
 -- --------------------------------------------------------
 
@@ -1483,7 +1486,8 @@ INSERT INTO `notics` (`id`, `nfaculty`, `nbatch`, `nsemester`, `nnotice`, `uploa
 (4, 'BSCCSIT', 2068, 'First', 'Today meeting at 2PM', '2019-06-27', 1, '2019-06-30', 'Meeting', 'Meeting'),
 (5, 'BSCCSIT', 2072, 'Seventh', 'Intrested student can apply for Everest Hackathon .\r\n5 days left!', '2019-06-27', 1, '2019-07-02', 'Everest Hackathon', 'Events'),
 (9, 'BSCCSIT', 2072, 'Seventh', 'There will be no classes tomorrow because of educational strike', '2019-06-29', 1, '2019-06-30', 'Educational Strike', 'Holiday'),
-(10, 'BSCCSIT', 2072, 'First', 'Mid defense will be on sunday 2019/06/30. Bring required materials.', '2019-06-30', 1, '2019-06-30', 'Project Mid-defense', 'Others');
+(10, 'BSCCSIT', 2072, 'First', 'Mid defense will be on sunday 2019/06/30. Bring required materials.', '2019-06-30', 1, '2019-06-30', 'Project Mid-defense', 'Others'),
+(11, 'BSCCSIT', 2072, 'Seventh', '7th Semester (2072 Batch): Prefinal defense of project work has been scheduled on Sunday, 19th Shrawan, 2076 at 7:00am. All project teams are notified to come with project report ( tape binding), presentation, and project demo in proper formal dress. Thank you.', '2019-08-03', 1, '2019-08-31', 'Pre Final Defense', 'Others');
 
 -- --------------------------------------------------------
 
@@ -1525,7 +1529,9 @@ CREATE TABLE `routine` (
 --
 
 INSERT INTO `routine` (`id`, `rfaculty`, `rbatch`, `rsemester`, `uploaded_by`, `uploaded_at`, `display`, `rtitle`, `routine`) VALUES
-(3, 'BSCCSIT', 2072, 'Seventh', 1, '2019-08-03', '2019-08-30', 'Class Routine', 'download.png');
+(1, 'BSCCSIT', 2074, 'Second', 1, '2019-08-03', '2019-08-31', 'Class Routine 2071', 'classroutine1.jpg'),
+(2, 'BSCCSIT', 2072, 'Fourth', 1, '2019-08-03', '2019-08-31', 'Class Routine 2072', 'classroutine.jpg'),
+(3, 'BSCCSIT', 2072, 'Seventh', 1, '2019-08-03', '2019-08-31', 'Practical Exam', 'routinePractical.jpg');
 
 -- --------------------------------------------------------
 
@@ -2123,13 +2129,13 @@ ALTER TABLE `marks`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `notics`
 --
 ALTER TABLE `notics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `parent`
@@ -2141,7 +2147,7 @@ ALTER TABLE `parent`
 -- AUTO_INCREMENT for table `routine`
 --
 ALTER TABLE `routine`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `student`
