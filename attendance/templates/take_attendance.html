@@ -91,47 +91,89 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="../../teacher/dashboard">
+                    <a href="{% url 'teacher:dashboard' %}">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="{% url 'teacher:teacher_profile' %}">
                         <i class="pe-7s-user"></i>
                         <p>User Profile</p>
                     </a>
                 </li>
+                {% if request.session.position == 'Admin' %}
+                 <li>
+                    <a href="{% url 'student:student_adm' %}">
+                        <i class="pe-7s-date"></i>
+                        <p>Student</p>
+                    </a>
+                </li>
                 <li>
-                    <a href="../../attendance">
+                    <a href="{% url 'teacher:teacher_adm' %}">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Teacher</p>
+                    </a>
+                </li>
+                 <li>
+                    <a href="{% url 'faculty:faculty' %}">
+                        <i class="pe-7s-note2"></i>
+                        <p>Faculty</p>
+                    </a>
+                </li>
+                {% endif %}
+                {% if request.session.position != 'Admin' %}
+                <li>
+                    <a href="{% url 'attendance:attendance'%}">
                         <i class="pe-7s-date"></i>
                         <p>Attendance</p>
                     </a>
                 </li>
+                {% endif %}
+                {% if request.session.position == 'HOD' or request.session.position == 'Admin' %}
                 <li>
-                    <a href="../../notice">
+                    <a href="{% url 'notics:notice' %}">
                         <i class="pe-7s-news-paper"></i>
                         <p>Notice</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../../notes">
+                    <a href="{% url 'routine:routine' %}">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Routine</p>
+                    </a>
+                </li>
+                {% endif %}
+                {% if request.session.position == 'HOD' %}
+                   <li>
+                    <a href="{% url 'algorithm:student_performance' %}">
+                        <i class="pe-7s-note2"></i>
+                        <p>Student Performance</p>
+                    </a>
+                </li>
+                {% endif %}
+                <li>
+                    <a href="{% url 'notes:notes' %}">
                         <i class="pe-7s-file"></i>
                         <p>Notes</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../../marks">
+                    <a href="{% url 'marks:marks' %}">
                         <i class="pe-7s-note2"></i>
                         <p>Marks</p>
                     </a>
                 </li>
+                {% if request.session.position != 'Admin' %}
                  <li>
-                    <a href="../../assignment">
+                    <a href="{% url 'assignment:assignment' %}">
                         <i class="pe-7s-note2"></i>
                         <p>Assignment</p>
                     </a>
                 </li>
+                {% endif %}
+
+             
       </div>
     </div>
 
@@ -195,7 +237,7 @@
  
 
  <div class="container">
-   <h2>Table</h2>
+   <h2><center>Take Attendance</center></h2>
    <label for="sel1">Select:</label>
    <select class="form" id="sel1">
      <option>0</option>
