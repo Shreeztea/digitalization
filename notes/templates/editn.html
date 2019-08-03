@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Index</title>
-    {% load staticfiles %}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'styl.css' %}">
-</head>
-
-<body>
-    <form method="POST" class="post-form" action="../update/{{notes.id}}">
+{% include "header.html" %}
+    <form method="POST" class="post-form" action="../updaten/{{notes.id}}">
         <!-- <form method="POST" class="post-form" action=""> -->
         {% csrf_token %}
         <div class="container">
@@ -24,16 +10,22 @@
                     <h3>Update Details</h3>
                 </div>
             </div>
-       
+            <input type="hidden" name="id" value="{{notes.id}}">
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Document:</label>
+                <label class="col-sm-2 col-form-label">Select files:</label>
                 <div class="col-sm-4">
-                    <input type="text" name="ndocument" id="id_ndocument" required maxlength="100"
-                        value="{{notes.ndocument}}" />
+                       <input type="file" name="ndocument"><br><br>
                 </div>
             </div>
+            <input type="hidden" name="uploaded_at" value="{{notes.uploaded_at}}">
 
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Document Name:</label>
+                <div class="col-sm-4">
+            <input type="text" name="nname" value="{{notes.nname}}">
+             </div>
+            </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Teacher Id:</label>
                 <div class="col-sm-4">

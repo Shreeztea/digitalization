@@ -2,6 +2,7 @@
 <table class="table table-striped table-bordered table-sm">
 	<thead class="thead-dark">
 	<tr>
+		<th>Note</th>
 		<th>Document</th>
 		<th>Download/View</th>
 		<th>Batch</th>
@@ -14,6 +15,7 @@
 		{%  for notes in notes  %}
 
 		<tr>
+			<th>{{notes.nname}}</th>
 			<th>{{ notes.ndocument }}</th>
 			<td>
                     <a href="../../assignment/pdf_download/{{ notes.ndocument }}" TARGET = "_blank">Download</a>

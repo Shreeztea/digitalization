@@ -23,7 +23,7 @@ def student_performance(request):
 
 
 def algorithm(request):
-    attObj = semester.objects.all()
+    attObj = semester.objects.filter(id__lt=46)
     assiObj = Assignment_submit.objects.filter(asid__lt=46)
     marObj = Marks.objects.filter(msemester='First')
 
