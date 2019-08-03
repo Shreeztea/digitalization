@@ -1,5 +1,5 @@
 {%include "header.html"%}
-
+ 
 <body>
                <div class="content">
             <div class="container-fluid">
@@ -7,11 +7,11 @@
                   <form>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Faculty</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>Select Faculty</option>
-      <option>IT</option>
-      <option>Mgmt</option>
-      <option>MBS</option>
+    <select class="form-control" name="nfaculty" id="exampleFormControlSelect1">
+      {%for faculty in faculty%}
+      <option value="{{faculty.fname}}">{{faculty.fname}}</option>
+      {%endfor%}
+      
     </select>
   </div>
 

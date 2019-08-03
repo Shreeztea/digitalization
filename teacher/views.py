@@ -4,9 +4,11 @@ from teacher.models import Teacher
 from django.http import HttpResponse
 from notics.models import Notics
 from routine.models import Routine
+from faculty.models import Faculty
 
 # Create your views here.
 def teacher(request):
+	faculty= Faculty.objects.all()
 	if request.method == "POST":
 		form = TeacherForm(request.POST)
 		if form.is_valid():
@@ -17,12 +19,25 @@ def teacher(request):
 				pass
 	else:
 		form = TeacherForm()
-	return render(request, "teacher.html", {'form':form})
+	return render(request, "indext.html", {'form':form})
 
 def showt(request):
 	teacher = Teacher.objects.all()
 	return render(request, "showt.html", {'teacher':teacher})
 
+def index(request):
+	teacher = Teacher.objects.all()
+	if request.method == "POST":
+		form = TeacherForm(request.POST)
+		if form.is_valid():
+			try:
+				form.save()
+				return redirect('../../teacher/showt')
+			except:
+				pass
+	else:
+		form = TeacherForm()
+	return render(request, "indext.html", {'form':form})
 
 def editt(request, id):
 	teacher = Teacher.objects.get(id=id)
