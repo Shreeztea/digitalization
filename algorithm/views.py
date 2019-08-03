@@ -21,6 +21,7 @@ def student_performance(request):
     faculty= Faculty.objects.all()      
     return render(request, 'performance1.html', {'faculty':faculty})
 
+
 def algorithm(request):
     attObj = semester.objects.all()
     assiObj = Assignment_submit.objects.filter(asid__lt=46)
