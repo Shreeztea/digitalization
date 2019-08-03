@@ -17,7 +17,7 @@ def teacher(request):
 				pass
 	else:
 		form = TeacherForm()
-	return render(request, "indext.html", {'form':form})
+	return render(request, "teacher.html", {'form':form})
 
 def showt(request):
 	teacher = Teacher.objects.all()
