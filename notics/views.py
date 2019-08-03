@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from notics.models import Notics
 from faculty.models import Faculty
 from routine.models import Routine
-
+ 
 def notice(request):
 	if request.method == "POST":
 		form = NoticsForm(request.POST)

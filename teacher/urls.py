@@ -14,4 +14,5 @@ urlpatterns = [
 	path('deletet/<int:id>', views.deletet),
 	path('add',views.teacher),
 	path('teacher_profile',views.teacher_profile,name='teacher_profile'),
+	path('index/',views.index),
 	]

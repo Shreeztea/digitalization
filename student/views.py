@@ -3,25 +3,46 @@ from student.forms import StudentForm
 from student.models import Student
 from django.contrib import messages
 from django.core.files import File
+from faculty.models import Faculty
 import os
 
 def student(request):
+	faculty= Faculty.objects.all()
+	# if request.method == "POST":
+	# 	form = StudentForm(request.POST, request.FILES)
+	# 	if form.is_valid():
+	# 		try:
+	# 			form.save()
+	# 			return redirect('../../student/show')
+	# 		except:
+	# 			pass
+	# else:
+	# 	form = StudentForm()
+	return render(request, "Student.html", {'faculty':faculty})
+
+
+def show(request):
+	if request.method == "POST":
+		faculty = request.POST.get('faculty')
+		batch = request.POST.get('batch')
+		fname = Faculty.objects.get(fname=faculty)
+		faculty_id = fname.fid
+		std = Student.objects.filter(sfaculty_id = faculty_id, sbatch=batch)
+		return render(request, "show.html", {'student': std})
+
+def add(request):
+	faculty= Faculty.objects.all()
 	if request.method == "POST":
 		form = StudentForm(request.POST, request.FILES)
 		if form.is_valid():
 			try:
 				form.save()
-				return redirect('../../student/show')
+				return redirect('../../student/student')
 			except:
 				pass
 	else:
 		form = StudentForm()
-	return render(request, "index.html", {'form': form})
-
-
-def show(request):
-		student = Student.objects.all()
-		return render(request, "show.html", {'student': student})
+	return render(request, "index.html", {'form':form})
 
 def edit(request, id):
 		student = Student.objects.get(id=id)
