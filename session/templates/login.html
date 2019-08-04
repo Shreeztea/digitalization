@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>login</title>
@@ -10,5 +10,79 @@
 		Password: <input type="password" name="pass">
 		<input type="submit" name="submit" value="Login">
 	</form>
+</body>
+</html>
+<!DOCTYPE html>
+<html> -->
+<!-- <head>
+	<title></title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head> -->
+  <!doctype html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>College digitalization</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    
+    <!-- Bootstrap core CSS     -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="{% static 'css/animate.min.css' %}" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="{% static 'css/light_bootstrap_dashboard.css' %}" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="{% static 'css/demo.css' %}" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/pe-icon-7-stroke.css' %}" rel="stylesheet" />
+
+ <!--  <style>
+    .btn {
+      font-size: 40px;
+      line-height: 20px;
+      background-color: green;
+    }
+  </style> -->
+
+</head>
+<body>
+<body>
+	  <div class="flex-container">
+    <div class="form flex-item bg-light">
+	<form action="loginauth/" method="POST">
+		{% csrf_token %}
+    <div class="login text-center">
+    <h1>Login to your account</h1></div><br>
+  Username:<br>
+  <input type="text" class="form-control" name="email">
+  <br>
+  Password:<br>
+  <input type="password" class="form-control" name="pass">
+  <small><a href="#">Forgot password</a></small>
+  <br><br>
+	<button type="submit" name="login" class="btn btn-success">Login</button>
+</form>
+</div>
+</div>
 </body>
 </html>

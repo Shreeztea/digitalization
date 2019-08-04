@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2019 at 08:23 PM
+-- Generation Time: Aug 04, 2019 at 05:12 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -1024,10 +1024,10 @@ CREATE TABLE `django_session` (
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('5scdwtttxz0f7j9i85zm8t6a9flt2kdh', 'YWZjOTYyMjljMzQwY2RmY2IxODE1ZDBiNjI1NzlkMWJmNjhhNWUwNjp7InVzZXJfZW1haWwiOiJzaHJpc3RpQGdtYWlsLmNvbSIsInVzZXJfbmFtZSI6IlNIUklTVEkgU0hSRVNUSEEiLCJ1c2VyX2ZhY3VsdHlpZCI6MSwidXNlcl9mYWN1bHR5IjoiQlNDQ1NJVCIsInVzZXJfYmF0Y2giOjIwNzIsInVzZXJfaWQiOjM3fQ==', '2019-08-18 03:11:06.555506'),
 ('8ouh0ztmic6h6rl177baudaex9o5b7ry', 'ZjgyN2Y1M2Q3ZDdjYTNjYjhlYTU3NzQ5ZTgxNjIyOTM4YjEyNDhiNDp7InVzZXJfZW1haWwiOiJkZW1vMUBnbWFpbC5jb20xIiwidXNlcl9uYW1lIjoiQU5JVEEgQkFJREhZQSIsInVzZXJfZmFjdWx0eWlkIjoxLCJ1c2VyX2ZhY3VsdHkiOiJCU0NDU0lUIiwidXNlcl9iYXRjaCI6MjA2OCwidXNlcl9pZCI6MX0=', '2019-07-12 04:39:55.267031'),
 ('rjm68amfc7pgv43hs4lx3vrlsd7uozbo', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-14 03:19:00.943956'),
-('rrudgwqkgp2gbg5mb4mjvv569ik2m0sh', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-05 06:38:14.365252'),
-('wus36t13puep3e7ayi8kialu7on4uu1k', 'M2Y0ZWI2YTg1ZTBjMjc4ODVlMWQ2YzgzYmVkNTMyMzMwYjc3MmI4MTp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjEsInBvc2l0aW9uIjoiSE9EIn0=', '2019-08-17 18:14:48.649426');
+('rrudgwqkgp2gbg5mb4mjvv569ik2m0sh', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-05 06:38:14.365252');
 
 -- --------------------------------------------------------
 
@@ -1397,10 +1397,10 @@ INSERT INTO `marks` (`id`, `sid`, `msemester`, `mexam`, `msubject`, `mmarks`, `f
 (322, 36, 'seventh', 'Pre Board', 'JAVA', 0, 'BSCCSIT', 2072, 'SHIRISHA MAHARJAN'),
 (323, 36, 'seventh', 'Pre Board', 'IT', 0, 'BSCCSIT', 2072, 'SHIRISHA MAHARJAN'),
 (324, 36, 'seventh', 'Pre Board', 'DBA', 0, 'BSCCSIT', 2072, 'SHIRISHA MAHARJAN'),
-(325, 37, 'seventh', 'Pre Board', 'ADBMS', 32, 'BSCCSIT', 2072, 'SHRISTI SHRESTHA'),
+(325, 37, 'seventh', 'Pre Board', 'ADBMS', 48, 'BSCCSIT', 2072, 'SHRISTI SHRESTHA'),
 (326, 37, 'seventh', 'Pre Board', 'JAVA', 42, 'BSCCSIT', 2072, 'SHRISTI SHRESTHA'),
-(327, 50, 'seventh', 'Pre Board', 'IT', 34, 'BSCCSIT', 2072, 'SHRISTI SHRESTHA'),
-(328, 37, 'seventh', 'Pre Board', 'DBA', 24, 'BSCCSIT', 2072, 'SHRISTI SHRESTHA'),
+(327, 37, 'seventh', 'Pre Board', 'IT', 39, 'BSCCSIT', 2072, 'SHRISTI SHRESTHA'),
+(328, 37, 'seventh', 'Pre Board', 'DBA', 50, 'BSCCSIT', 2072, 'SHRISTI SHRESTHA'),
 (329, 38, 'seventh', 'Pre Board', 'ADBMS', 31, 'BSCCSIT', 2072, 'SOMIT NAKARMI'),
 (330, 38, 'seventh', 'Pre Board', 'JAVA', 36, 'BSCCSIT', 2072, 'SOMIT NAKARMI'),
 (331, 38, 'seventh', 'Pre Board', 'IT', 36, 'BSCCSIT', 2072, 'SOMIT NAKARMI'),
