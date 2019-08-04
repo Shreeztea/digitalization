@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<title>Index</title>
-	{% load staticfiles %}
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-</head>
+{% include "header.html" %}
 
 <body>
 	<form method="POST" class="post-form" action="/teacher/updatet/{{teacher.id}}">
@@ -28,6 +11,7 @@
 					<h3>Update Details</h3>
 				</div>
 			</div>
+			<input type="hidden" name="id" value="{{teacher.id}}">
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Teacher Id:</label>
 				<div class="col-sm-4">
@@ -74,7 +58,7 @@
 				</div>
 
 			</div>
-
+			<input type="hidden" name="tpassword" value="{{teacher.tpassword}}">
 
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Teacher Position:</label>

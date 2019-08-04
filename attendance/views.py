@@ -12,8 +12,8 @@ from django.contrib import messages
 def take_attendance(request):
 		faculty = request.POST.get('faculty')
 		batch = request.POST.get('batch')
-		student = Student.objects.filter(sfaculty_id=faculty, sbatch=batch)
 		fac = Faculty.objects.get(fid=faculty)
+		student = Student.objects.filter(sfaculty_id=faculty, sbatch=batch)
 		x = {'student': student}
 		y = {}
 		y['faculty']= fac.fname
