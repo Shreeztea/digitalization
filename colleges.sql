@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2019 at 05:12 AM
+-- Generation Time: Aug 07, 2019 at 02:31 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -118,7 +118,52 @@ INSERT INTO `assignment_submit` (`id`, `aid`, `asid`, `asname`, `asubject`, `ast
 (42, 1, 42, 'UTPREKSHYA GAUTAM', 'ADBMS', 3, NULL),
 (43, 1, 43, 'VINOD DANGI', 'ADBMS', 4, NULL),
 (44, 1, 44, 'YOGENDRA  BHATTARAI', 'ADBMS', 4, NULL),
-(45, 1, 45, 'RAMESH BAYAK', 'ADBMS', 4, NULL);
+(45, 1, 45, 'RAMESH BAYAK', 'ADBMS', 4, NULL),
+(46, 11, 1, 'AASHISH MALLA', 'CprogrM', 0, '2019-05-30'),
+(47, 11, 2, 'ADARSHA SUBEDI', 'CprogrM', 0, '2019-05-30'),
+(48, 11, 3, 'ANIL POUDEL', 'CprogrM', 0, '2019-05-30'),
+(49, 11, 4, 'ANISH GHIMIRE', 'CprogrM', 0, '2019-05-30'),
+(50, 11, 5, 'ASHISH MAHARJAN', 'CprogrM', 0, '2019-05-30'),
+(51, 11, 6, 'AVINAYA  ACHARYA', 'CprogrM', 0, '2019-05-30'),
+(52, 11, 7, 'BINA MAHARJAN', 'CprogrM', 0, '2019-05-30'),
+(53, 11, 8, 'BINISH MANANDHAR', 'CprogrM', 0, '2019-05-30'),
+(54, 11, 9, 'BINOD SUBEDI', 'CprogrM', 0, '2019-05-30'),
+(55, 11, 10, 'BINU GHIMIRE', 'CprogrM', 0, '2019-05-30'),
+(56, 11, 11, 'BISHOW SHRESTHA', 'CprogrM', 0, '2019-05-30'),
+(57, 11, 12, 'HARI PRASAD CHAUDHARY', 'CprogrM', 0, '2019-05-30'),
+(58, 11, 13, 'ISHWOR UPRETI', 'CprogrM', 0, '2019-05-30'),
+(59, 11, 14, 'KIRAN KUMAR THARU', 'CprogrM', 0, '2019-05-30'),
+(60, 11, 15, 'LALIT  UPADHAYAY', 'CprogrM', 0, '2019-05-30'),
+(61, 11, 16, 'MANOJ SARU', 'CprogrM', 0, '2019-05-30'),
+(62, 11, 17, 'NABIN KUMAR TIMALSINA', 'CprogrM', 0, '2019-05-30'),
+(63, 11, 18, 'NIBA TANDUKAR', 'CprogrM', 0, '2019-05-30'),
+(64, 11, 19, 'NIMA K.C', 'CprogrM', 0, '2019-05-30'),
+(65, 11, 20, 'NOOTAN BHATTARAI', 'CprogrM', 0, '2019-05-30'),
+(66, 11, 21, 'PRABHAKAR THAPA', 'CprogrM', 0, '2019-05-30'),
+(67, 11, 22, 'PRAKASH B.K', 'CprogrM', 0, '2019-05-30'),
+(68, 11, 23, 'PRAGATI KANDEL', 'CprogrM', 0, '2019-05-30'),
+(69, 11, 24, 'PRAJW0L MAN SHAKYA', 'CprogrM', 0, '2019-05-30'),
+(70, 11, 25, 'PRIYANKA SHRESTHA', 'CprogrM', 0, '2019-05-30'),
+(71, 11, 26, 'PUSHPA KARKI', 'CprogrM', 0, '2019-05-30'),
+(72, 11, 27, 'RAVI MAHAJAN', 'CprogrM', 0, '2019-05-30'),
+(73, 11, 28, 'ASWIN ARYAL', 'CprogrM', 0, '2019-05-30'),
+(74, 11, 29, 'RAJIB DANGOL', 'CprogrM', 0, '2019-05-30'),
+(75, 11, 30, 'RANJIT SHRESTHA', 'CprogrM', 0, '2019-05-30'),
+(76, 11, 31, 'ROJAN SEDHAI', 'CprogrM', 0, '2019-05-30'),
+(77, 11, 32, 'SABIN MAHAT', 'CprogrM', 0, '2019-05-30'),
+(78, 11, 33, 'SUSHIL D.C.', 'CprogrM', 0, '2019-05-30'),
+(79, 11, 34, 'SAGAR SHRESTHA', 'CprogrM', 0, '2019-05-30'),
+(80, 11, 35, 'SAMVRANT SINGH THAPA', 'CprogrM', 0, '2019-05-30'),
+(81, 11, 36, 'SHIRISHA MAHARJAN', 'CprogrM', 0, '2019-05-30'),
+(82, 11, 37, 'SHRISTI SHRESTHA', 'CprogrM', 0, '2019-05-30'),
+(83, 11, 38, 'SOMIT NAKARMI', 'CprogrM', 0, '2019-05-30'),
+(84, 11, 39, 'SUBASH  NAGARKOTI', 'CprogrM', 0, '2019-05-30'),
+(85, 11, 40, 'SUBHA LAXMI MAHARJAN', 'CprogrM', 0, '2019-05-30'),
+(86, 11, 41, 'SUMIT BASNET', 'CprogrM', 0, '2019-05-30'),
+(87, 11, 42, 'UTPREKSHYA GAUTAM', 'CprogrM', 0, '2019-05-30'),
+(88, 11, 43, 'VINOD DANGI', 'CprogrM', 0, '2019-05-30'),
+(89, 11, 44, 'YOGENDRA  BHATTARAI', 'CprogrM', 0, '2019-05-30'),
+(90, 11, 45, 'RAMESH BAYAK', 'CprogrM', 0, '2019-05-30');
 
 -- --------------------------------------------------------
 
@@ -1024,10 +1069,11 @@ CREATE TABLE `django_session` (
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
-('5scdwtttxz0f7j9i85zm8t6a9flt2kdh', 'YWZjOTYyMjljMzQwY2RmY2IxODE1ZDBiNjI1NzlkMWJmNjhhNWUwNjp7InVzZXJfZW1haWwiOiJzaHJpc3RpQGdtYWlsLmNvbSIsInVzZXJfbmFtZSI6IlNIUklTVEkgU0hSRVNUSEEiLCJ1c2VyX2ZhY3VsdHlpZCI6MSwidXNlcl9mYWN1bHR5IjoiQlNDQ1NJVCIsInVzZXJfYmF0Y2giOjIwNzIsInVzZXJfaWQiOjM3fQ==', '2019-08-18 03:11:06.555506'),
 ('8ouh0ztmic6h6rl177baudaex9o5b7ry', 'ZjgyN2Y1M2Q3ZDdjYTNjYjhlYTU3NzQ5ZTgxNjIyOTM4YjEyNDhiNDp7InVzZXJfZW1haWwiOiJkZW1vMUBnbWFpbC5jb20xIiwidXNlcl9uYW1lIjoiQU5JVEEgQkFJREhZQSIsInVzZXJfZmFjdWx0eWlkIjoxLCJ1c2VyX2ZhY3VsdHkiOiJCU0NDU0lUIiwidXNlcl9iYXRjaCI6MjA2OCwidXNlcl9pZCI6MX0=', '2019-07-12 04:39:55.267031'),
+('klxbox6t2sbu3jmfsq3hynu366kolbkk', 'MDM5NzQzZWM4NGQyNmZkNWU3ZmEwMzliZmRkNzJiNjM2ODU1Y2U4Mzp7InVzZXJfZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJ1c2VyX25hbWUiOiJhZG1pbiIsInRpZCI6MiwidXNlcl9mYWN1bHR5aWQiOjQsInBvc2l0aW9uIjoiQWRtaW4ifQ==', '2019-08-18 04:37:21.334880'),
 ('rjm68amfc7pgv43hs4lx3vrlsd7uozbo', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-14 03:19:00.943956'),
-('rrudgwqkgp2gbg5mb4mjvv569ik2m0sh', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-05 06:38:14.365252');
+('rrudgwqkgp2gbg5mb4mjvv569ik2m0sh', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-05 06:38:14.365252'),
+('zch03nse13dfsxbzs0qxke23zz2p4xfr', 'M2Y0ZWI2YTg1ZTBjMjc4ODVlMWQ2YzgzYmVkNTMyMzMwYjc3MmI4MTp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjEsInBvc2l0aW9uIjoiSE9EIn0=', '2019-08-21 12:13:33.787773');
 
 -- --------------------------------------------------------
 
@@ -1048,7 +1094,8 @@ CREATE TABLE `faculty` (
 
 INSERT INTO `faculty` (`id`, `fid`, `fname`, `fhead`) VALUES
 (1, 1, 'BSCCSIT', 'Dabbal Singh Mahara'),
-(3, 2, 'BBS', 'Sahadev Sigdel');
+(3, 2, 'BBS', 'Sahadev Sigdel'),
+(4, 2, 'Admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -1865,7 +1912,7 @@ INSERT INTO `student` (`id`, `sid`, `sname`, `saddress`, `scontact`, `semail`, `
 (34, 34, 'SAGAR SHRESTHA', 'kathmandu', 986675854, 'demo72@gmail.com35', 2072, 1, 'SAGA123'),
 (35, 35, 'SAMVRANT SINGH THAPA', 'kathmandu', 986675854, 'demo72@gmail.com36', 2072, 1, 'SAMVRAN123'),
 (36, 36, 'SHIRISHA MAHARJAN', 'kathmandu', 986675854, 'demo72@gmail.com37', 2072, 1, 'SHIRISH123'),
-(37, 37, 'SHRISTI SHRESTHA', 'kathmandu', 986675854, 'shristi@gmail.com', 2072, 1, 'SHRIST123'),
+(37, 37, 'SHRISTI SHRESTHA', 'kathmandu', 986675853, 'shristi@gmail.com', 2072, 1, 'SHRIST123'),
 (38, 38, 'SOMIT NAKARMI', 'kathmandu', 986675854, 'demo72@gmail.com39', 2072, 1, 'SOM123'),
 (39, 39, 'SUBASH  NAGARKOTI', 'kathmandu', 986675854, 'demo72@gmail.com40', 2072, 1, 'SU123'),
 (40, 40, 'SUBHA LAXMI MAHARJAN', 'kathmandu', 986675854, 'demo72@gmail.com41', 2072, 1, 'SU123'),
@@ -2137,7 +2184,7 @@ CREATE TABLE `teacher` (
 
 INSERT INTO `teacher` (`id`, `tid`, `tname`, `taddress`, `tcontact`, `temail`, `tpassword`, `tposition`, `tfaculty_id`) VALUES
 (1, 1, 'Dabbal Singh Mahara', 'Kalanki', '9808765645', 'dabbal@gmail.com', '123456', 'HOD', 1),
-(2, 2, 'admin', 'admin', '987451223', 'admin@admin.com', 'admin', 'Admin', 3),
+(2, 2, 'admin', 'admin', '987451223', 'admin@admin.com', 'admin', 'Admin', 4),
 (3, 3, 'Kumar Prasun', 'Kalanki', '9851045612', 'kumar@gmail.com', 'kumar', 'Teacher', 1);
 
 --
@@ -2312,7 +2359,7 @@ ALTER TABLE `assignment`
 -- AUTO_INCREMENT for table `assignment_submit`
 --
 ALTER TABLE `assignment_submit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `attendance_daily`
@@ -2390,7 +2437,7 @@ ALTER TABLE `django_migrations`
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `marks`
