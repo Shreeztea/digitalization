@@ -23,7 +23,9 @@ def student_performance(request):
 
 
 def algorithm(request):
-    attObj = semester.objects.filter(id__lt=46)
+    batch = 2072
+    sem = 'First'
+    attObj = semester.objects.filter(semester=sem,batch=batch)
     assiObj = Assignment_submit.objects.filter(asid__lt=46)
     marObj = Marks.objects.filter(msemester='First')
 
@@ -163,16 +165,16 @@ def algorithm(request):
     stdcc = []
     stdcd = []
     for ca in ca:
-        stdObj1 = Student.objects.get(id=ca)
+        stdObj1 = Student.objects.get(sid=ca,sbatch=batch)
         stdca.append(stdObj1)
     for cb in cb:
-        stdObj2 = Student.objects.get(id=cb)
+        stdObj2 = Student.objects.get(sid=cb,sbatch=batch)
         stdcb.append(stdObj2)
     for cc in cc:
-        stdObj3 = Student.objects.get(id=cc)
+        stdObj3 = Student.objects.get(sid=cc,sbatch=batch)
         stdcc.append(stdObj3)
     for cd in cd:
-        stdObj4 = Student.objects.get(id=cd)
+        stdObj4 = Student.objects.get(sid=cd,sbatch=batch)
         stdcd.append(stdObj4)
     # return HttpResponse("<pre>%s"%stdcb)
     # title = "ca = %s cb = %s"%(ca,cb) 
