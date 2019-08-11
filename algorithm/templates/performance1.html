@@ -3,7 +3,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
+<<<<<<< HEAD
                          <form method="POST" class="post-form" action="../algorithm/">
+=======
+                         <!-- <form method="POST" action="../algorithm/"> -->
+                          <form action="{%url 'algorithm:algorithm' %}" method="POST">
+>>>>>>> 8dc786d9fccb1e591f09fdad2cdc2b8970b8413d
                             {% csrf_token%}
   <div class="form-group">
     <label for="exampleFormControlSelect1">Faculty</label>
@@ -32,7 +37,7 @@
     <label for="exampleFormControlSelect2">Semester</label>
     <select class="form-control" placeholder="Select batch" name="semester" id="exampleFormControlSelect2">
       <option>Select Semester</option>
-        <option value="First">First</option>
+      <option value="First">First</option>
       <option value="Second">Second</option>
       <option value="Third">Third</option>
       <option value="Fourth">Fourth</option>
