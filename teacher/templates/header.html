@@ -21,22 +21,11 @@
     <link href="{% static 'css/light_bootstrap_dashboard.css' %}" rel="stylesheet"/>
 
 
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{% static 'css/demo.css' %}" rel="stylesheet" />
-
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="{% static 'css/pe-icon-7-stroke.css' %}" rel="stylesheet" />
-
- <!--  <style>
-    .btn {
-      font-size: 40px;
-      line-height: 20px;
-      background-color: green;
-    }
-  </style> -->
 
 </head>
 <body>
@@ -44,12 +33,6 @@
 <div class="wrapper">
     <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
 
-    <!--
-
-        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
-        Tip 2: you can also add an image using data-image tag
-
-    -->
 
     	<div class="sidebar-wrapper">
             <div class="logo">
@@ -74,13 +57,13 @@
                 {% if request.session.position == 'Admin' %}
                  <li>
                     <a href="{% url 'student:student_adm' %}">
-                        <i class="pe-7s-date"></i>
+                        <i class="pe-7s-user"></i>
                         <p>Student</p>
                     </a>
                 </li>
                 <li>
                     <a href="{% url 'teacher:teacher_adm' %}">
-                        <i class="pe-7s-news-paper"></i>
+                        <i class="pe-7s-user"></i>
                         <p>Teacher</p>
                     </a>
                 </li>
@@ -102,7 +85,7 @@
                 {% if request.session.position == 'HOD' or request.session.position == 'Admin' %}
                 <li>
                     <a href="{% url 'notics:notice' %}">
-                        <i class="pe-7s-news-paper"></i>
+                        <i class="pe-7s-notebook"></i>
                         <p>Notice</p>
                     </a>
                 </li>
@@ -129,7 +112,7 @@
                 </li>
                 <li>
                     <a href="{% url 'marks:marks' %}">
-                        <i class="pe-7s-note2"></i>
+                        <i class="pe-7s-note"></i>
                         <p>Marks</p>
                     </a>
                 </li>
@@ -166,31 +149,9 @@
 								<p class="hidden-lg hidden-md">Dashboard</p>
                             </a>
                         </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-globe"></i>
-                                    <b class="caret hidden-lg hidden-md"></b>
-									<p class="hidden-lg hidden-md">
-										5 Notifications
-										<b class="caret"></b>
-									</p>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                           <a href="">
-                               <p>Account</p>
-                            </a>
-                        </li>
                         <li>
                             <a href="{% url 'session:logout' %}">
                                 <p>Log out</p>

@@ -25,8 +25,9 @@ def student_performance(request):
 def algorithm(request):
     batch = 2071 
     sem = 'First'
-    # batch = request.POST.get('batch')
-    # sem = request.POST.get('semester')
+# if request.method == "POST":
+#     batch = request.POST.get('batch')
+#     sem = request.POST.get('semester')
     attObj = semester.objects.filter(semester=sem,batch=batch)
     totalstd = (attObj.count())+1
     assiObj = Assignment_submit.objects.filter(asid__lt=totalstd)

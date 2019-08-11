@@ -3,7 +3,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                         <form method="post" action="../algorithm/">
+                         <form method="POST" class="post-form" action="../algorithm/">
                             {% csrf_token%}
   <div class="form-group">
     <label for="exampleFormControlSelect1">Faculty</label>
@@ -20,7 +20,7 @@
       <option>Select Batch</option>
       <option value="2068">2068</option>
       <option value="2069">2069</option>
-      <option value="2070">2071</option>
+      <option value="2070">2070</option>
       <option value="2071">2071</option>
       <option value="2072">2072</option>
       <option value="2073">2073</option>
@@ -42,7 +42,7 @@
       <option value="Eighth">Eighth</option>
     </select>
   </div>
-   <button input type="submit" class="btn">View Performance</button></a>
+   <a href="algo_display.html"><button input type="submit" class="btn">View Performance</button></a>
 </form>
 
 
