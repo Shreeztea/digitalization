@@ -60,7 +60,7 @@ def mark(request):
 #     #     form = MarksForm()
 #     #     return render(request, "indexm.html", {'form': form})
 #     faculty = Faculty.objects.all()
-#     return render(request, "indexm.html", {'faculty':faculty})
+#     return render(request, "indexm.html", {'faculty':faculty}) 
 
 
 def showm(request):

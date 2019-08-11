@@ -23,8 +23,13 @@ def student_performance(request):
 
 
 def algorithm(request):
-    batch = 2072 
-    sem = 'First'
+
+    if request.method == "POST":
+        batch = request.POST.get('batch')
+        sem = request.POST.get('semester')        
+    else:
+        batch = 2072
+        sem = 'first'
     # batch = request.POST.get('batch')
     # sem = request.POST.get('semester')
     
