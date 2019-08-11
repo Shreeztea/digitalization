@@ -23,11 +23,14 @@ def student_performance(request):
 
 
 def algorithm(request):
-    batch = 2072
+    batch = 2071 
     sem = 'First'
+    # batch = request.POST.get('batch')
+    # sem = request.POST.get('semester')
     attObj = semester.objects.filter(semester=sem,batch=batch)
-    assiObj = Assignment_submit.objects.filter(asid__lt=46)
-    marObj = Marks.objects.filter(msemester='First')
+    totalstd = (attObj.count())+1
+    assiObj = Assignment_submit.objects.filter(asid__lt=totalstd)
+    marObj = Marks.objects.filter(msemester=sem,mbatch=batch)
 
     attArr = []
     assiArr = []
@@ -158,7 +161,8 @@ def algorithm(request):
         i=i+1   
         if(meana[i]==meana[i-1] and meanb[i]==meanb[i-1] and meanc[i]==meanc[i-1] and meanaa[i]==meanaa[i-1] and meanbb[i]==meanbb[i-1] and meancc[i]==meancc[i-1] and meanaaa[i]==meanaaa[i-1] and meanbbb[i]==meanbbb[i-1] and meanccc[i]==meanccc[i-1]):
             break
-
+        elif(i>20):
+            break
     
     stdca = []
     stdcb = []

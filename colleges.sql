@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2019 at 02:31 PM
+-- Generation Time: Aug 11, 2019 at 05:41 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -51,7 +51,8 @@ INSERT INTO `assignment` (`id`, `atid`, `afname`, `asbatch`, `aname`, `asubject`
 (13, 2, 'BSCSIT', 2072, 'assign 6', 'aeur', '2019-06-25', '04-1-Electronic-Payment-Systems.docx'),
 (16, 1, 'BSCCSIT', 2068, 'C ++', 'CProgramm', '2019-06-29', '2068.pdf'),
 (17, 1, 'BSCCSIT', 2068, 'ADBMS', 'CProgram', '2019-06-21', 'ai_solution.pdf'),
-(18, 3, 'BSCCSIT', 2072, 'Java Assignment', 'Java', '2019-08-17', 'ip.pdf');
+(18, 3, 'BSCCSIT', 2072, 'Java Assignment', 'Java', '2019-08-17', 'ip.pdf'),
+(19, 1, 'BSCCSIT', 2071, 'Major Assignment', 'CProgramming', '2019-08-02', 'assignment.csv');
 
 -- --------------------------------------------------------
 
@@ -119,51 +120,9 @@ INSERT INTO `assignment_submit` (`id`, `aid`, `asid`, `asname`, `asubject`, `ast
 (43, 1, 43, 'VINOD DANGI', 'ADBMS', 4, NULL),
 (44, 1, 44, 'YOGENDRA  BHATTARAI', 'ADBMS', 4, NULL),
 (45, 1, 45, 'RAMESH BAYAK', 'ADBMS', 4, NULL),
-(46, 11, 1, 'AASHISH MALLA', 'CprogrM', 0, '2019-05-30'),
-(47, 11, 2, 'ADARSHA SUBEDI', 'CprogrM', 0, '2019-05-30'),
-(48, 11, 3, 'ANIL POUDEL', 'CprogrM', 0, '2019-05-30'),
-(49, 11, 4, 'ANISH GHIMIRE', 'CprogrM', 0, '2019-05-30'),
-(50, 11, 5, 'ASHISH MAHARJAN', 'CprogrM', 0, '2019-05-30'),
-(51, 11, 6, 'AVINAYA  ACHARYA', 'CprogrM', 0, '2019-05-30'),
-(52, 11, 7, 'BINA MAHARJAN', 'CprogrM', 0, '2019-05-30'),
-(53, 11, 8, 'BINISH MANANDHAR', 'CprogrM', 0, '2019-05-30'),
-(54, 11, 9, 'BINOD SUBEDI', 'CprogrM', 0, '2019-05-30'),
-(55, 11, 10, 'BINU GHIMIRE', 'CprogrM', 0, '2019-05-30'),
-(56, 11, 11, 'BISHOW SHRESTHA', 'CprogrM', 0, '2019-05-30'),
-(57, 11, 12, 'HARI PRASAD CHAUDHARY', 'CprogrM', 0, '2019-05-30'),
-(58, 11, 13, 'ISHWOR UPRETI', 'CprogrM', 0, '2019-05-30'),
-(59, 11, 14, 'KIRAN KUMAR THARU', 'CprogrM', 0, '2019-05-30'),
-(60, 11, 15, 'LALIT  UPADHAYAY', 'CprogrM', 0, '2019-05-30'),
-(61, 11, 16, 'MANOJ SARU', 'CprogrM', 0, '2019-05-30'),
-(62, 11, 17, 'NABIN KUMAR TIMALSINA', 'CprogrM', 0, '2019-05-30'),
-(63, 11, 18, 'NIBA TANDUKAR', 'CprogrM', 0, '2019-05-30'),
-(64, 11, 19, 'NIMA K.C', 'CprogrM', 0, '2019-05-30'),
-(65, 11, 20, 'NOOTAN BHATTARAI', 'CprogrM', 0, '2019-05-30'),
-(66, 11, 21, 'PRABHAKAR THAPA', 'CprogrM', 0, '2019-05-30'),
-(67, 11, 22, 'PRAKASH B.K', 'CprogrM', 0, '2019-05-30'),
-(68, 11, 23, 'PRAGATI KANDEL', 'CprogrM', 0, '2019-05-30'),
-(69, 11, 24, 'PRAJW0L MAN SHAKYA', 'CprogrM', 0, '2019-05-30'),
-(70, 11, 25, 'PRIYANKA SHRESTHA', 'CprogrM', 0, '2019-05-30'),
-(71, 11, 26, 'PUSHPA KARKI', 'CprogrM', 0, '2019-05-30'),
-(72, 11, 27, 'RAVI MAHAJAN', 'CprogrM', 0, '2019-05-30'),
-(73, 11, 28, 'ASWIN ARYAL', 'CprogrM', 0, '2019-05-30'),
-(74, 11, 29, 'RAJIB DANGOL', 'CprogrM', 0, '2019-05-30'),
-(75, 11, 30, 'RANJIT SHRESTHA', 'CprogrM', 0, '2019-05-30'),
-(76, 11, 31, 'ROJAN SEDHAI', 'CprogrM', 0, '2019-05-30'),
-(77, 11, 32, 'SABIN MAHAT', 'CprogrM', 0, '2019-05-30'),
-(78, 11, 33, 'SUSHIL D.C.', 'CprogrM', 0, '2019-05-30'),
-(79, 11, 34, 'SAGAR SHRESTHA', 'CprogrM', 0, '2019-05-30'),
-(80, 11, 35, 'SAMVRANT SINGH THAPA', 'CprogrM', 0, '2019-05-30'),
-(81, 11, 36, 'SHIRISHA MAHARJAN', 'CprogrM', 0, '2019-05-30'),
-(82, 11, 37, 'SHRISTI SHRESTHA', 'CprogrM', 0, '2019-05-30'),
-(83, 11, 38, 'SOMIT NAKARMI', 'CprogrM', 0, '2019-05-30'),
-(84, 11, 39, 'SUBASH  NAGARKOTI', 'CprogrM', 0, '2019-05-30'),
-(85, 11, 40, 'SUBHA LAXMI MAHARJAN', 'CprogrM', 0, '2019-05-30'),
-(86, 11, 41, 'SUMIT BASNET', 'CprogrM', 0, '2019-05-30'),
-(87, 11, 42, 'UTPREKSHYA GAUTAM', 'CprogrM', 0, '2019-05-30'),
-(88, 11, 43, 'VINOD DANGI', 'CprogrM', 0, '2019-05-30'),
-(89, 11, 44, 'YOGENDRA  BHATTARAI', 'CprogrM', 0, '2019-05-30'),
-(90, 11, 45, 'RAMESH BAYAK', 'CprogrM', 0, '2019-05-30');
+(46, 1, 46, 'Demo', 'Demo', 3, '2019-08-01'),
+(47, 1, 47, 'Demo', 'Demo', 4, '2019-08-02'),
+(48, 1, 48, 'Demo', 'Demo', 2, '2019-08-03');
 
 -- --------------------------------------------------------
 
@@ -768,7 +727,55 @@ INSERT INTO `attendance_semester` (`id`, `std_id`, `std_name`, `semester`, `pres
 (312, 42, 'UTPREKSHYA GAUTAM', 'seventh', 58, 32, 90, 'BSCCSIT', 2072),
 (313, 43, 'VINOD DANGI', 'seventh', 66, 24, 90, 'BSCCSIT', 2072),
 (314, 44, 'YOGENDRA  BHATTARAI', 'seventh', 46, 44, 90, 'BSCCSIT', 2072),
-(315, 45, 'RAMESH BAYAK', 'seventh', 52, 38, 90, 'BSCCSIT', 2072);
+(315, 45, 'RAMESH BAYAK', 'seventh', 52, 38, 90, 'BSCCSIT', 2072),
+(316, 91, 'ANANDA SIGDEL', 'First', 66, 19, 85, 'BSCCSIT', 2071),
+(317, 92, 'ANIL KUMAR KARKI', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(318, 93, 'ANIL LAMA', 'First', 85, 0, 85, 'BSCCSIT', 2071),
+(319, 94, 'ANISH KHANAL', 'First', 77, 8, 85, 'BSCCSIT', 2071),
+(320, 95, 'ANU HAMAL', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(321, 96, 'ASHESH CHALISE', 'First', 68, 17, 85, 'BSCCSIT', 2071),
+(322, 97, 'ASHISH SUBEDI', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(323, 98, 'ASHOK MAHARJAN', 'First', 78, 7, 85, 'BSCCSIT', 2071),
+(324, 99, 'ASMITA ACHARYA', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(325, 100, 'BHESH RAJ REGMI', 'First', 77, 8, 85, 'BSCCSIT', 2071),
+(326, 101, 'BIBEK SHREES', 'First', 78, 7, 85, 'BSCCSIT', 2071),
+(327, 102, 'BIKASH K.C.', 'First', 85, 0, 85, 'BSCCSIT', 2071),
+(328, 103, 'BIKESH MAHARJAN', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(329, 104, 'DEVRAJ KHADKA', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(330, 105, 'DHIRAJ DAHAL', 'First', 74, 11, 85, 'BSCCSIT', 2071),
+(331, 106, 'DIVYA PANDEY', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(332, 107, 'KAPIL BHATTARAI', 'First', 83, 2, 85, 'BSCCSIT', 2071),
+(333, 108, 'KISHAN KHADKA', 'First', 83, 2, 85, 'BSCCSIT', 2071),
+(334, 109, 'KUSHAL NEUPANE', 'First', 77, 8, 85, 'BSCCSIT', 2071),
+(335, 110, 'MATRIKA KOIRALA', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(336, 111, 'NISTHA SHRESTHA', 'First', 83, 2, 85, 'BSCCSIT', 2071),
+(337, 112, 'PRAKASH SHRESTHA', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(338, 113, 'RAMESH GIRI', 'First', 85, 0, 85, 'BSCCSIT', 2071),
+(339, 114, 'RISHMA KHADKA', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(340, 115, 'ROJINA NEUPANE', 'First', 79, 6, 85, 'BSCCSIT', 2071),
+(341, 116, 'SACHIN PANDEY', 'First', 84, 1, 85, 'BSCCSIT', 2071),
+(342, 117, 'SAMEER ARYAL', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(343, 118, 'SANJEEV RIMAL', 'First', 84, 1, 85, 'BSCCSIT', 2071),
+(344, 119, 'SANJIV THAPA', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(345, 120, 'SAURAV SITAULA', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(346, 121, 'SUDEEP BHADEL', 'First', 81, 4, 85, 'BSCCSIT', 2071),
+(347, 122, 'SUDIP GIRI', 'First', 80, 5, 85, 'BSCCSIT', 2071),
+(348, 123, 'SUDIP KARMACHARYA', 'First', 83, 2, 85, 'BSCCSIT', 2071),
+(349, 124, 'SUJAN GHIMIRE', 'First', 79, 6, 85, 'BSCCSIT', 2071),
+(350, 125, 'SUJAN KOIRALA', 'First', 66, 19, 85, 'BSCCSIT', 2071),
+(351, 126, 'SUMAN MAGAR', 'First', 79, 6, 85, 'BSCCSIT', 2071),
+(352, 127, 'SUMAN SHRESTHA', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(353, 128, 'SUMIT SHAHI', 'First', 79, 6, 85, 'BSCCSIT', 2071),
+(354, 129, 'SURAJ ACHARYA', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(355, 130, 'SURENDRA PRATAP DHAMALA', 'First', 78, 7, 85, 'BSCCSIT', 2071),
+(356, 131, 'SURESH KUMAR SHRESTHA', 'First', 78, 7, 85, 'BSCCSIT', 2071),
+(357, 132, 'SURESH NEUPANE', 'First', 82, 3, 85, 'BSCCSIT', 2071),
+(358, 133, 'SUSHANT PANDEY', 'First', 84, 1, 85, 'BSCCSIT', 2071),
+(359, 134, 'SUSHMA PURI', 'First', 85, 0, 85, 'BSCCSIT', 2071),
+(360, 135, 'SUYOG MANANDHAR', 'First', 80, 5, 85, 'BSCCSIT', 2071),
+(361, 136, 'TANK PRASAD BHANDARI', 'First', 65, 10, 75, 'BSCCSIT', 2071),
+(362, 137, 'TUKANATH PAUDEL', 'First', 70, 5, 75, 'BSCCSIT', 2071),
+(363, 138, 'UJJWAL SILWAL', 'First', 72, 3, 75, 'BSCCSIT', 2071);
 
 -- --------------------------------------------------------
 
@@ -1070,7 +1077,7 @@ CREATE TABLE `django_session` (
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
 ('8ouh0ztmic6h6rl177baudaex9o5b7ry', 'ZjgyN2Y1M2Q3ZDdjYTNjYjhlYTU3NzQ5ZTgxNjIyOTM4YjEyNDhiNDp7InVzZXJfZW1haWwiOiJkZW1vMUBnbWFpbC5jb20xIiwidXNlcl9uYW1lIjoiQU5JVEEgQkFJREhZQSIsInVzZXJfZmFjdWx0eWlkIjoxLCJ1c2VyX2ZhY3VsdHkiOiJCU0NDU0lUIiwidXNlcl9iYXRjaCI6MjA2OCwidXNlcl9pZCI6MX0=', '2019-07-12 04:39:55.267031'),
-('klxbox6t2sbu3jmfsq3hynu366kolbkk', 'MDM5NzQzZWM4NGQyNmZkNWU3ZmEwMzliZmRkNzJiNjM2ODU1Y2U4Mzp7InVzZXJfZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJ1c2VyX25hbWUiOiJhZG1pbiIsInRpZCI6MiwidXNlcl9mYWN1bHR5aWQiOjQsInBvc2l0aW9uIjoiQWRtaW4ifQ==', '2019-08-18 04:37:21.334880'),
+('8z7bwao8e5kq4jzrbobz2scrph0lg6sy', 'M2Y0ZWI2YTg1ZTBjMjc4ODVlMWQ2YzgzYmVkNTMyMzMwYjc3MmI4MTp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjEsInBvc2l0aW9uIjoiSE9EIn0=', '2019-08-23 15:03:25.546583'),
 ('rjm68amfc7pgv43hs4lx3vrlsd7uozbo', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-14 03:19:00.943956'),
 ('rrudgwqkgp2gbg5mb4mjvv569ik2m0sh', 'OGRiZDRkMGUzYmJkMmI5ZTdlZmUyYTA1ZjhhOThiNDU2ZmVhZDcyMDp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjF9', '2019-07-05 06:38:14.365252'),
 ('zch03nse13dfsxbzs0qxke23zz2p4xfr', 'M2Y0ZWI2YTg1ZTBjMjc4ODVlMWQ2YzgzYmVkNTMyMzMwYjc3MmI4MTp7InVzZXJfZW1haWwiOiJkYWJiYWxAZ21haWwuY29tIiwidXNlcl9uYW1lIjoiRGFiYmFsIFNpbmdoIE1haGFyYSIsInRpZCI6MSwidXNlcl9mYWN1bHR5aWQiOjEsInBvc2l0aW9uIjoiSE9EIn0=', '2019-08-21 12:13:33.787773');
@@ -1749,7 +1756,64 @@ INSERT INTO `marks` (`id`, `sid`, `msemester`, `mexam`, `msubject`, `mmarks`, `f
 (627, 42, 'Sixth', 'Final', 'All', 403, 'BSCCSIT', 2072, 'UTPREKSHYA GAUTAM'),
 (628, 43, 'Sixth', 'Final', 'All', 356, 'BSCCSIT', 2072, 'VINOD DANGI'),
 (629, 44, 'Sixth', 'Final', 'All', 380, 'BSCCSIT', 2072, 'YOGENDRA  BHATTARAI'),
-(630, 45, 'Sixth', 'Final', 'All', 352, 'BSCCSIT', 2072, 'RAMESH BAYAK');
+(630, 45, 'Sixth', 'Final', 'All', 352, 'BSCCSIT', 2072, 'RAMESH BAYAK'),
+(782, 195, 'first', 'Final', 'All', 280, 'BSCCSIT', 2073, 'Anil Pandey'),
+(783, 196, 'first', 'Final', 'All', 290, 'BSCCSIT', 2073, 'Anusuya Sijapati'),
+(784, 197, 'first', 'Final', 'All', 240, 'BSCCSIT', 2073, 'Ashan Ghimire'),
+(785, 198, 'first', 'Final', 'All', 280, 'BSCCSIT', 2073, 'Ashish Bhattarai'),
+(786, 199, 'first', 'Final', 'All', 300, 'BSCCSIT', 2073, 'Ashray Dahal'),
+(787, 200, 'first', 'Final', 'All', 320, 'BSCCSIT', 2073, 'Asmita Bhusal'),
+(788, 201, 'first', 'Final', 'All', 330, 'BSCCSIT', 2073, 'Basant Rai'),
+(789, 202, 'first', 'Final', 'All', 340, 'BSCCSIT', 2073, 'Bibash Shrestha'),
+(800, 91, 'First', 'final', 'All', 337, 'BSCCSIT', 2071, 'ANANDA SIGDEL'),
+(801, 92, 'First', 'final', 'All', 304, 'BSCCSIT', 2071, 'ANIL KUMAR KARKI'),
+(802, 93, 'First', 'final', 'All', 322, 'BSCCSIT', 2071, 'ANIL LAMA'),
+(803, 94, 'First', 'final', 'All', 330, 'BSCCSIT', 2071, 'ANISH KHANAL'),
+(804, 95, 'First', 'final', 'All', 303, 'BSCCSIT', 2071, 'ANU HAMAL'),
+(805, 96, 'First', 'final', 'All', 308, 'BSCCSIT', 2071, 'ASHESH CHALISE'),
+(806, 97, 'First', 'final', 'All', 254, 'BSCCSIT', 2071, 'ASHISH SUBEDI');
+INSERT INTO `marks` (`id`, `sid`, `msemester`, `mexam`, `msubject`, `mmarks`, `fname`, `mbatch`, `sname`) VALUES
+(807, 98, 'First', 'final', 'All', 391, 'BSCCSIT', 2071, 'ASHOK MAHARJAN'),
+(808, 99, 'First', 'final', 'All', 382, 'BSCCSIT', 2071, 'ASMITA ACHARYA'),
+(809, 100, 'First', 'final', 'All', 363, 'BSCCSIT', 2071, 'BHESH RAJ REGMI'),
+(810, 101, 'First', 'final', 'All', 361, 'BSCCSIT', 2071, 'BIBEK SHREES'),
+(811, 102, 'First', 'final', 'All', 342, 'BSCCSIT', 2071, 'BIKASH K.C.'),
+(812, 103, 'First', 'final', 'All', 391, 'BSCCSIT', 2071, 'BIKESH MAHARJAN'),
+(813, 104, 'First', 'final', 'All', 398, 'BSCCSIT', 2071, 'DEVRAJ KHADKA'),
+(814, 105, 'First', 'final', 'All', 344, 'BSCCSIT', 2071, 'DHIRAJ DAHAL'),
+(815, 106, 'First', 'final', 'All', 323, 'BSCCSIT', 2071, 'DIVYA PANDEY'),
+(816, 107, 'First', 'final', 'All', 393, 'BSCCSIT', 2071, 'KAPIL BHATTARAI'),
+(817, 108, 'First', 'final', 'All', 395, 'BSCCSIT', 2071, 'KISHAN KHADKA'),
+(818, 109, 'First', 'final', 'All', 0, 'BSCCSIT', 2071, 'KUSHAL NEUPANE'),
+(819, 110, 'First', 'final', 'All', 304, 'BSCCSIT', 2071, 'MATRIKA KOIRALA'),
+(820, 111, 'First', 'final', 'All', 399, 'BSCCSIT', 2071, 'NISTHA SHRESTHA'),
+(821, 112, 'First', 'final', 'All', 360, 'BSCCSIT', 2071, 'PRAKASH SHRESTHA'),
+(822, 113, 'First', 'final', 'All', 375, 'BSCCSIT', 2071, 'RAMESH GIRI'),
+(823, 114, 'First', 'final', 'All', 426, 'BSCCSIT', 2071, 'RISHMA KHADKA'),
+(824, 115, 'First', 'final', 'All', 340, 'BSCCSIT', 2071, 'ROJINA NEUPANE'),
+(825, 116, 'First', 'final', 'All', 342, 'BSCCSIT', 2071, 'SACHIN PANDEY'),
+(826, 117, 'First', 'final', 'All', 336, 'BSCCSIT', 2071, 'SAMEER ARYAL'),
+(827, 118, 'First', 'final', 'All', 299, 'BSCCSIT', 2071, 'SANJEEV RIMAL'),
+(828, 119, 'First', 'final', 'All', 334, 'BSCCSIT', 2071, 'SANJIV THAPA'),
+(829, 120, 'First', 'final', 'All', 376, 'BSCCSIT', 2071, 'SAURAV SITAULA'),
+(830, 121, 'First', 'final', 'All', 393, 'BSCCSIT', 2071, 'SUDEEP BHADEL'),
+(831, 122, 'First', 'final', 'All', 351, 'BSCCSIT', 2071, 'SUDIP GIRI'),
+(832, 123, 'First', 'final', 'All', 356, 'BSCCSIT', 2071, 'SUDIP KARMACHARYA'),
+(833, 124, 'First', 'final', 'All', 347, 'BSCCSIT', 2071, 'SUJAN GHIMIRE'),
+(834, 125, 'First', 'final', 'All', 329, 'BSCCSIT', 2071, 'SUJAN KOIRALA'),
+(835, 126, 'First', 'final', 'All', 353, 'BSCCSIT', 2071, 'SUMAN MAGAR'),
+(836, 127, 'First', 'final', 'All', 353, 'BSCCSIT', 2071, 'SUMAN SHRESTHA'),
+(837, 128, 'First', 'final', 'All', 345, 'BSCCSIT', 2071, 'SUMIT SHAHI'),
+(838, 129, 'First', 'final', 'All', 395, 'BSCCSIT', 2071, 'SURAJ ACHARYA'),
+(839, 130, 'First', 'final', 'All', 342, 'BSCCSIT', 2071, 'SURENDRA PRATAP DHAMALA'),
+(840, 131, 'First', 'final', 'All', 315, 'BSCCSIT', 2071, 'SURESH KUMAR SHRESTHA'),
+(841, 132, 'First', 'final', 'All', 326, 'BSCCSIT', 2071, 'SURESH NEUPANE'),
+(842, 133, 'First', 'final', 'All', 330, 'BSCCSIT', 2071, 'SUSHANT PANDEY'),
+(843, 134, 'First', 'final', 'All', 366, 'BSCCSIT', 2071, 'SUSHMA PURI'),
+(844, 135, 'First', 'final', 'All', 381, 'BSCCSIT', 2071, 'SUYOG MANANDHAR'),
+(845, 136, 'First', 'final', 'All', 184, 'BSCCSIT', 2071, 'TANK PRASAD BHANDARI'),
+(846, 137, 'First', 'final', 'All', 364, 'BSCCSIT', 2071, 'TUKANATH PAUDEL'),
+(847, 147, 'First', 'final', 'All', 338, 'BSCCSIT', 2071, 'UJJWAL SILWAL');
 
 -- --------------------------------------------------------
 
@@ -2158,7 +2222,17 @@ INSERT INTO `student` (`id`, `sid`, `sname`, `saddress`, `scontact`, `semail`, `
 (280, 33, 'Surya Prasad Poudel', 'Kathmandu', 98665754, 'demo12@gmail.com33', 2069, 1, 'Sury123'),
 (281, 34, 'Sushma Shrestha', 'Kathmandu', 98665754, 'demo12@gmail.com34', 2069, 1, 'Sushm123'),
 (282, 35, 'Uttam Giri', 'Kathmandu', 98665754, 'demo12@gmail.com35', 2069, 1, 'Ut123'),
-(283, 36, 'Yudip Khaniya', 'Kathmandu', 98665754, 'demo12@gmail.com36', 2069, 1, 'Yud123');
+(283, 36, 'Yudip Khaniya', 'Kathmandu', 98665754, 'demo12@gmail.com36', 2069, 1, 'Yud123'),
+(330, 1, 'AASHISH MALLA', 'kathmandu', 986675854, 'demo70@gmail.com1', 2073, 1, 'AAS123'),
+(331, 2, 'ADARSHA SUBEDI', 'kathmandu', 986675854, 'demo70@gmail.com2', 2073, 1, 'ADAR123'),
+(332, 3, 'ANIL POUDEL', 'kathmandu', 986675854, 'demo70@gmail.com3', 2073, 1, 'A123'),
+(333, 4, 'ANISH GHIMIRE', 'kathmandu', 986675854, 'demo70@gmail.com4', 2073, 1, 'ANI123'),
+(334, 5, 'ASHISH MAHARJAN', 'kathmandu', 986675854, 'demo70@gmail.com5', 2073, 1, 'ASHIS123'),
+(335, 6, 'AVINAYA  ACHARYA', 'kathmandu', 986675854, 'demo70@gmail.com6', 2073, 1, 'AVINAY123'),
+(336, 7, 'BINA MAHARJAN', 'kathmandu', 986675854, 'demo70@gmail.com7', 2073, 1, 'BIN123'),
+(337, 8, 'BINISH MANANDHAR', 'kathmandu', 986675854, 'demo70@gmail.com8', 2073, 1, 'BINISH123'),
+(338, 9, 'BINOD SUBEDI', 'kathmandu', 986675854, 'demo70@gmail.com9', 2073, 1, 'BI123'),
+(339, 10, 'BINU GHIMIRE', 'kathmandu', 986675854, 'demo70@gmail.com10', 2073, 1, 'BI123');
 
 -- --------------------------------------------------------
 
@@ -2353,13 +2427,13 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `assignment`
 --
 ALTER TABLE `assignment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `assignment_submit`
 --
 ALTER TABLE `assignment_submit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `attendance_daily`
@@ -2377,7 +2451,7 @@ ALTER TABLE `attendance_monthly`
 -- AUTO_INCREMENT for table `attendance_semester`
 --
 ALTER TABLE `attendance_semester`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=316;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=364;
 
 --
 -- AUTO_INCREMENT for table `auth_group`
@@ -2443,7 +2517,7 @@ ALTER TABLE `faculty`
 -- AUTO_INCREMENT for table `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=631;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=848;
 
 --
 -- AUTO_INCREMENT for table `notes`
@@ -2473,7 +2547,7 @@ ALTER TABLE `routine`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=340;
 
 --
 -- AUTO_INCREMENT for table `teacher`
