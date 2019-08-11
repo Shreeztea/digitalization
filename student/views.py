@@ -9,6 +9,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.urls import reverse
 
 import os
@@ -36,6 +37,7 @@ def show(request):
 		faculty_id = fname.fid
 		std = Student.objects.filter(sfaculty_id = faculty_id, sbatch=batch)
 		return render(request, "show.html", {'student': std})
+	return render(request,"show.html")	
 
 def add(request):
 	faculty= Faculty.objects.all()
@@ -55,6 +57,20 @@ def edit(request, id):
 		student = Student.objects.get(id=id)
 		return render(request, "edit.html", {'student': student})
 
+def updatei(request, id):
+	student = Student.objects.get(id=id)
+	form = StudentForm(request.POST, instance = student)
+
+	if form.is_valid():
+		form.save()
+		messages.success(request,'Student Record successfully updated')
+		batch= student.sbatch
+		faculty_id = student.sfaculty_id
+
+		std = Student.objects.filter(sfaculty_id = faculty_id, sbatch=batch)
+		return render(request, "show.html", {'student': std})
+	
+
 
 def update(request, id):
 	student = Student.objects.get(id=id)
@@ -63,7 +79,7 @@ def update(request, id):
 	# return redirect('../show')
 	if form.is_valid():
 		form.save()
-		messages.success(request,'Student Record successfully updated')
+		# messages.success(request,'Student Record successfully updated')
 		return redirect('student:std_user')
 	x={'Student':student}
 	y={'form':form}
@@ -72,8 +88,21 @@ def update(request, id):
 
 def delete(request, id):
 	student = Student.objects.get(id=id)
+	batch= student.sbatch
+	faculty_id = student.sfaculty_id
+	
 	student.delete()
-	return redirect('../show')
+	# return HttpResponse(faculty_id)
+	
+	std = Student.objects.filter(sfaculty_id = faculty_id, sbatch=batch)
+	return render(request, "show.html", {'student': std})
+	# return redirect('../showstd/'.batch)
+
+# def showstd(request, batch):
+# 	return HttpResponse(batch)
+# 	student = Student.objects.get(sbatch=batch)
+# 	return render(request,"show.html")	
+	
 
 def user(request):
 	if('user_email' in request.session):

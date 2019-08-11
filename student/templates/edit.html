@@ -1,3 +1,4 @@
+{% include "header.html" %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-	<form method="POST" class="post-form" action="../update/{{student.id}}">
+	<form method="POST" class="post-form" action="../updatei/{{student.id}}">
 		<!-- <form method="POST" class="post-form" action=""> -->
 		{% csrf_token %}
 		<div class="container">
@@ -25,6 +26,7 @@
 					<h3>Update Details</h3>
 				</div>
 			</div>
+			<input type="hidden" name="id" value="{{student.id}}">
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Student Id:</label>
 				<div class="col-sm-4">
@@ -63,7 +65,7 @@
 				</div>
 			</div>
 
-
+			<input type="hidden" name="spassword" value="{{student.spassword}}">
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Student Batch:</label>
 				<div class="col-sm-4">

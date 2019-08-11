@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.core.files import File
 import os
 from student.models import Student
-
+from django.http import HttpResponse
 import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -77,22 +77,37 @@ def editm(request, id):
     return render(request, "editm.html", {'marks': marks})
 
 
+
 def updatem(request, id):
     marks = Marks.objects.get(id=id)
     form = MarksForm(request.POST, instance=marks)
     # form.save()
     # return redirect('../show')
     if form.is_valid():
+        fname = marks.fname
+        mbatch = marks.mbatch
+        msemester = marks.msemester
         form.save()
-        return redirect('../showm')
+        # return redirect('../showm')
+        marks = Marks.objects.filter(msemester=msemester,mbatch=mbatch,fname=fname)
+        return render(request, "showm.html", {'marks': marks})
+
 
     return render(request, "editm.html", {'marks': marks})
 
 
 def deletem(request, id):
     marks = Marks.objects.get(id=id)
+    fname = marks.fname
+    mbatch = marks.mbatch
+    msemester = marks.msemester
     marks.delete()
-    return redirect('../showm')
+    # return redirect('../showm')
+    # return HttpResponse(fname)
+
+    marks = Marks.objects.filter(msemester=msemester,mbatch=mbatch,fname=fname)
+    return render(request, "showm.html", {'marks': marks})
+
 
 def marks(request):
     faculty = Faculty.objects.all()
