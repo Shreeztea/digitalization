@@ -75,7 +75,7 @@ def view_attendance(request):
 		faculty = request.POST.get('faculty')
 		batch = request.POST.get('batch')
 		sem = request.POST.get('semester')
-		att = semester.objects.filter(faculty=faculty, semester=sem)
+		att = semester.objects.filter(faculty=faculty, semester=sem, batch=batch)
 		return render(request,"view_attendance.html",{'attendance':att})
 	else:
 		return HttpResponse('not post')	

@@ -1,17 +1,19 @@
 {%include "header.html"%}
-<a href="{%url "marks:marks" %}">Back</a>
-	<form action="/marks/upload_csv" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
+ <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- <div class="form-group"> -->
+                           <a href="{%url "marks:marks" %}"><button class="btn btn-primary">Back</button></a>
+    <form action="/marks/upload_csv" method="POST" enctype="multipart/form-data" class="form-horizontal"><br>
 {% csrf_token %}
-<div class="form-group">
-    <label for="name" class="col-md-3 col-sm-3 col-xs-12 control-label">CSV File: </label>
-    <div class="col-md-8">
-        <input type="file" name="csv_file" id="csv_file" required="True" class="form-control">
-    </div>                    
-</div>
-<div class="form-group">                    
-    <div class="col-md-3 col-sm-3 col-xs-12 col-md-offset-3" style="margin-bottom:10px;">
-         <input type="submit" name="upload" value="Upload">
-    </div> 
+                            <label for="name">CSV File: </label>
+                            <input type="file" name="csv_file" id="csv_file" required="True" class="form-control"><br>
+                        <input type="submit" name="upload" value="Upload">
+                    </div> 
+                </div>
+            </div>
+        </div>
 
     {% if messages %}
 <ul>
